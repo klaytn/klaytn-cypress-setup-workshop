@@ -17,7 +17,7 @@
     </item>
     
     <item>
-      <title>Start the Telegraf service</title>
+      <title>Start the monitoring services</title>
       <link>/klaytn-cypress-setup-workshop/50_start_services/20_start_monitoring_services.html</link>
       <pubDate>Mon, 11 Jul 2022 18:39:03 +0900</pubDate>
       

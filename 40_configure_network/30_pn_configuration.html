@@ -12,22 +12,22 @@
     <title>PN static-nodes.json - Klaytn CCO Onboarding - Cypress</title>
 
     
-    <link href="/klaytn-cypress-setup-workshop/css/nucleus.css?1658311142" rel="stylesheet">
-    <link href="/klaytn-cypress-setup-workshop/css/fontawesome-all.min.css?1658311142" rel="stylesheet">
-    <link href="/klaytn-cypress-setup-workshop/css/hybrid.css?1658311142" rel="stylesheet">
-    <link href="/klaytn-cypress-setup-workshop/css/featherlight.min.css?1658311142" rel="stylesheet">
-    <link href="/klaytn-cypress-setup-workshop/css/perfect-scrollbar.min.css?1658311142" rel="stylesheet">
-    <link href="/klaytn-cypress-setup-workshop/css/auto-complete.css?1658311142" rel="stylesheet">
-    <link href="/klaytn-cypress-setup-workshop/css/atom-one-dark-reasonable.css?1658311142" rel="stylesheet">
-    <link href="/klaytn-cypress-setup-workshop/css/theme.css?1658311142" rel="stylesheet">
-    <link href="/klaytn-cypress-setup-workshop/css/tabs.css?1658311142" rel="stylesheet">
-    <link href="/klaytn-cypress-setup-workshop/css/hugo-theme.css?1658311142" rel="stylesheet">
+    <link href="/klaytn-cypress-setup-workshop/css/nucleus.css?1658312590" rel="stylesheet">
+    <link href="/klaytn-cypress-setup-workshop/css/fontawesome-all.min.css?1658312590" rel="stylesheet">
+    <link href="/klaytn-cypress-setup-workshop/css/hybrid.css?1658312590" rel="stylesheet">
+    <link href="/klaytn-cypress-setup-workshop/css/featherlight.min.css?1658312590" rel="stylesheet">
+    <link href="/klaytn-cypress-setup-workshop/css/perfect-scrollbar.min.css?1658312590" rel="stylesheet">
+    <link href="/klaytn-cypress-setup-workshop/css/auto-complete.css?1658312590" rel="stylesheet">
+    <link href="/klaytn-cypress-setup-workshop/css/atom-one-dark-reasonable.css?1658312590" rel="stylesheet">
+    <link href="/klaytn-cypress-setup-workshop/css/theme.css?1658312590" rel="stylesheet">
+    <link href="/klaytn-cypress-setup-workshop/css/tabs.css?1658312590" rel="stylesheet">
+    <link href="/klaytn-cypress-setup-workshop/css/hugo-theme.css?1658312590" rel="stylesheet">
     
-    <link href="/klaytn-cypress-setup-workshop/css/theme-klaytn.css?1658311142" rel="stylesheet">
+    <link href="/klaytn-cypress-setup-workshop/css/theme-klaytn.css?1658312590" rel="stylesheet">
     
-    <link href="/klaytn-cypress-setup-workshop/css/foo.css?1658311142" rel="stylesheet"><link href="/klaytn-cypress-setup-workshop/css/bar.css?1658311142" rel="stylesheet">
+    <link href="/klaytn-cypress-setup-workshop/css/foo.css?1658312590" rel="stylesheet"><link href="/klaytn-cypress-setup-workshop/css/bar.css?1658312590" rel="stylesheet">
 
-    <script src="/klaytn-cypress-setup-workshop/js/jquery-3.3.1.min.js?1658311142"></script>
+    <script src="/klaytn-cypress-setup-workshop/js/jquery-3.3.1.min.js?1658312590"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -54,14 +54,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/klaytn-cypress-setup-workshop/js/lunr.min.js?1658311142"></script>
-<script type="text/javascript" src="/klaytn-cypress-setup-workshop/js/auto-complete.js?1658311142"></script>
+<script type="text/javascript" src="/klaytn-cypress-setup-workshop/js/lunr.min.js?1658312590"></script>
+<script type="text/javascript" src="/klaytn-cypress-setup-workshop/js/auto-complete.js?1658312590"></script>
 <script type="text/javascript">
     
         var baseurl = "\/klaytn-cypress-setup-workshop";
     
 </script>
-<script type="text/javascript" src="/klaytn-cypress-setup-workshop/js/search.js?1658311142"></script>
+<script type="text/javascript" src="/klaytn-cypress-setup-workshop/js/search.js?1658312590"></script>
 
     
   </div>
@@ -568,9 +568,9 @@
  
   
     
-      <li data-nav-id="/50_start_services/20_start_monitoring_services.html" title="Start the Telegraf service" class="dd-item ">
+      <li data-nav-id="/50_start_services/20_start_monitoring_services.html" title="Start the monitoring services" class="dd-item ">
         <a href="/klaytn-cypress-setup-workshop/50_start_services/20_start_monitoring_services.html">
-        <b>B. </b>Start the Telegraf service
+        <b>B. </b>Start the monitoring services
         <i class="fas fa-check read-icon"></i>
         </a>
     </li>
@@ -762,22 +762,17 @@
 
 <br />
 
-<h4 id="2-check-if-the-static-nodesjson-has-correct-information-for-your-pn">2. Check if the static-nodes.json has correct information for your PN.</h4>
-<p><em>** Unlike CN, PN uses a static-nodes.json file to find out where to connect and PNN consists of PNs within the Cypress network topology.</em>
-<em><a href="https://docs.klaytn.foundation/klaytn#tiered-networks">https://docs.klaytn.foundation/klaytn#tiered-networks</a></em></p>
+<h4 id="2-modify-the-static-nodesjson-in-your-pn1-and-pn2">2. Modify the static-nodes.json in your PN1 and PN2.</h4>
 <blockquote>
-<p>Typically, PNs maintain just one connection with a PN in a neighboring Core Cell. The number of peer connections is subject to change depending on the network configuration.
-<img src="/klaytn-cypress-setup-workshop/images/klaytn_network_topology.png" alt="Klaytn_Network_Topology"></p>
+<p>PNN(Proxy Node Network) consists of PNs within the Cypress network topology.</p>
+<blockquote>
+<p>Typically, PNs maintain just one connection with a PN in a neighboring Core Cell. The number of peer connections is subject to change depending on the network configuration.</p>
 </blockquote>
-<h5 id="1-for-thrust-">1) For Thrust ,</h5>
-<p>PN1
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>[
-</span></span><span style="display:flex;"><span>  &#34;CN_KNI_ADDRESS@CN_INTERNAL_IP:PORT?discport=0<span style="color:#960050;background-color:#1e0010">&amp;</span>ntype=cn&#34;
-</span></span><span style="display:flex;"><span>]</span></span></code></pre></div>
-PN2
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>[
-</span></span><span style="display:flex;"><span>&#34;CN_KNI_ADDRESS@CN_INTERNAL_IP:PORT?discport=0<span style="color:#960050;background-color:#1e0010">&amp;</span>ntype=cn&#34;
-</span></span><span style="display:flex;"><span>]</span></span></code></pre></div></p>
+</blockquote>
+<h5 id="since-the-information-in-static-nodesjson-is-different-for-each-pn-we-will-inform-each-cco-individually">Since the information in static-nodes.json is different for each PN, we will inform each CCO individually.</h5>
+<p><em>** Please refer below diagram and the docs. - <a href="https://docs.klaytn.foundation/klaytn#tiered-networks">https://docs.klaytn.foundation/klaytn#tiered-networks</a></em><br>
+<em>** Unlike CN, PN uses a static-nodes.json file to find out where to connect.</em></p>
+<p><img src="/klaytn-cypress-setup-workshop/images/klaytn_network_topology.png" alt="Klaytn_Network_Topology"></p>
 <p><br />
 
 If you finish this step, please click the next button <code>&gt;</code> on the right side of this page.</p>
@@ -1226,16 +1221,16 @@ If you finish this step, please click the next button <code>&gt;</code> on the r
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/klaytn-cypress-setup-workshop/js/clipboard.min.js?1658311142"></script>
-    <script src="/klaytn-cypress-setup-workshop/js/perfect-scrollbar.min.js?1658311142"></script>
-    <script src="/klaytn-cypress-setup-workshop/js/perfect-scrollbar.jquery.min.js?1658311142"></script>
-    <script src="/klaytn-cypress-setup-workshop/js/jquery.sticky.js?1658311142"></script>
-    <script src="/klaytn-cypress-setup-workshop/js/featherlight.min.js?1658311142"></script>
-    <script src="/klaytn-cypress-setup-workshop/js/highlight.pack.js?1658311142"></script>
+    <script src="/klaytn-cypress-setup-workshop/js/clipboard.min.js?1658312590"></script>
+    <script src="/klaytn-cypress-setup-workshop/js/perfect-scrollbar.min.js?1658312590"></script>
+    <script src="/klaytn-cypress-setup-workshop/js/perfect-scrollbar.jquery.min.js?1658312590"></script>
+    <script src="/klaytn-cypress-setup-workshop/js/jquery.sticky.js?1658312590"></script>
+    <script src="/klaytn-cypress-setup-workshop/js/featherlight.min.js?1658312590"></script>
+    <script src="/klaytn-cypress-setup-workshop/js/highlight.pack.js?1658312590"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/klaytn-cypress-setup-workshop/js/modernizr.custom-3.6.0.js?1658311142"></script>
-    <script src="/klaytn-cypress-setup-workshop/js/learn.js?1658311142"></script>
-    <script src="/klaytn-cypress-setup-workshop/js/hugo-learn.js?1658311142"></script>
+    <script src="/klaytn-cypress-setup-workshop/js/modernizr.custom-3.6.0.js?1658312590"></script>
+    <script src="/klaytn-cypress-setup-workshop/js/learn.js?1658312590"></script>
+    <script src="/klaytn-cypress-setup-workshop/js/hugo-learn.js?1658312590"></script>
     
         
             <script src="https://unpkg.com/mermaid@8.8.0/dist/mermaid.min.js"></script>
