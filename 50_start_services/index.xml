@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Start the services on Klaytn CCO Onboarding - Cypress</title>
+    <link>/klaytn-cypress-setup-workshop/50_start_services.html</link>
+    <description>Recent content in Start the services on Klaytn CCO Onboarding - Cypress</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 11 Jul 2022 18:26:28 +0900</lastBuildDate><atom:link href="/klaytn-cypress-setup-workshop/50_start_services/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Start the klaytn services</title>
+      <link>/klaytn-cypress-setup-workshop/50_start_services/10_start_klaytn_service.html</link>
+      <pubDate>Mon, 11 Jul 2022 18:37:31 +0900</pubDate>
+      
+      <guid>/klaytn-cypress-setup-workshop/50_start_services/10_start_klaytn_service.html</guid>
+      <description>1. Start the Klaytn service, if it is running. 1) For CN, $ sudo systemctl status kcnd $ sudo systemctl start kcnd $ sudo systemctl status kcnd 2) For PN, $ sudo systemctl status kpnd $ sudo systemctl start kpnd $ sudo systemctl status kpnd 3) If the services are not installed from yum, you can start the service like below, $ sudo &amp;lt;installation_path&amp;gt;/kcnd status $ sudo &amp;lt;installation_path&amp;gt;/kcnd start $ sudo &amp;lt;installation_path&amp;gt;/kcnd status If you finish this step, please click the next button &amp;gt; on the right side of this page.</description>
+    </item>
+    
+    <item>
+      <title>Start the Telegraf service</title>
+      <link>/klaytn-cypress-setup-workshop/50_start_services/20_start_monitoring_services.html</link>
+      <pubDate>Mon, 11 Jul 2022 18:39:03 +0900</pubDate>
+      
+      <guid>/klaytn-cypress-setup-workshop/50_start_services/20_start_monitoring_services.html</guid>
+      <description>2. Start monitoring services. 1) For both CN and PN, start the Telegraf service. $ sudo systemctl status telegraf $ sudo systemctl start telegraf $ sudo systemctl status telegraf 2) For both CN and PN, start the Datadog service if it is stopped. $ sudo systemctl status datadog-agent $ sudo systemctl start datadog-agent $ sudo systemctl status datadog-agent If you finish this step, please click the next button &amp;gt; on the right side of this page.</description>
+    </item>
+    
+    <item>
+      <title>Check the services</title>
+      <link>/klaytn-cypress-setup-workshop/50_start_services/30_check_the_services.html</link>
+      <pubDate>Mon, 11 Jul 2022 18:42:35 +0900</pubDate>
+      
+      <guid>/klaytn-cypress-setup-workshop/50_start_services/30_check_the_services.html</guid>
+      <description>3. Watch the service log to confirm if your nodes are correctly joined. ** If the node is not a proposer at that block, and the consensus is successful, the node have executed(==validates) the block. In other words, a block is inserted. _** You can refer this document for more details about node log.
+1) For CN, $ tail &amp;lt;your_klaytn_home_path&amp;gt;/kcnd/log/kcnd.out INFO Inserted a new block number=14 hash=13cbfc…f007fc txs=0 gas=0 elapsed=793.</description>
+    </item>
+    
+    <item>
+      <title>Check Monitoring Dashboard</title>
+      <link>/klaytn-cypress-setup-workshop/50_start_services/40_check_monitoring_dashboard.html</link>
+      <pubDate>Thu, 14 Jul 2022 19:11:35 +0900</pubDate>
+      
+      <guid>/klaytn-cypress-setup-workshop/50_start_services/40_check_monitoring_dashboard.html</guid>
+      <description>4. Take a look at Grafana dashboard to confirm if your nodes are correctly joined to Cypress network. Link : Cypress Grafana ** You can refer this document to check your services further.
+https://docs.klaytn.foundation/node/core-cell/installation-guide/testing-the-core-cell#kcn-console-kpn-console If your nodes are shown and CN/PN Inter Connections looks 2 in this dashboard, everything is configured normally. Please send a message to Klaytn DevOps by Slack channel #cco_7th_batch. If you finish this step, please click the next button &amp;gt; on the right side of this page.</description>
+    </item>
+    
+  </channel>
+</rss>

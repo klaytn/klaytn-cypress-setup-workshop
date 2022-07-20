@@ -1,0 +1,1249 @@
+<!DOCTYPE html>
+<html lang="en" class="js csstransforms3d">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="Hugo 0.101.0" />
+    <meta name="description" content="">
+<meta name="author" content="Klaytn DevOps team">
+
+    <link rel="shortcut icon" href="/klaytn-cypress-setup-workshop/images/Logo-2.png" type="image/x-icon" />
+
+    <title>Datadog Configuration - Klaytn CCO Onboarding - Cypress</title>
+
+    
+    <link href="/klaytn-cypress-setup-workshop/css/nucleus.css?1658305832" rel="stylesheet">
+    <link href="/klaytn-cypress-setup-workshop/css/fontawesome-all.min.css?1658305832" rel="stylesheet">
+    <link href="/klaytn-cypress-setup-workshop/css/hybrid.css?1658305832" rel="stylesheet">
+    <link href="/klaytn-cypress-setup-workshop/css/featherlight.min.css?1658305832" rel="stylesheet">
+    <link href="/klaytn-cypress-setup-workshop/css/perfect-scrollbar.min.css?1658305832" rel="stylesheet">
+    <link href="/klaytn-cypress-setup-workshop/css/auto-complete.css?1658305832" rel="stylesheet">
+    <link href="/klaytn-cypress-setup-workshop/css/atom-one-dark-reasonable.css?1658305832" rel="stylesheet">
+    <link href="/klaytn-cypress-setup-workshop/css/theme.css?1658305832" rel="stylesheet">
+    <link href="/klaytn-cypress-setup-workshop/css/tabs.css?1658305832" rel="stylesheet">
+    <link href="/klaytn-cypress-setup-workshop/css/hugo-theme.css?1658305832" rel="stylesheet">
+    
+    <link href="/klaytn-cypress-setup-workshop/css/theme-klaytn.css?1658305832" rel="stylesheet">
+    
+    <link href="/klaytn-cypress-setup-workshop/css/foo.css?1658305832" rel="stylesheet"><link href="/klaytn-cypress-setup-workshop/css/bar.css?1658305832" rel="stylesheet">
+
+    <script src="/klaytn-cypress-setup-workshop/js/jquery-3.3.1.min.js?1658305832"></script>
+
+    <style>
+      :root #header + #content > #left > #rlblock_left{
+          display:none !important;
+      }
+      
+    </style>
+    
+  </head>
+  <body class="" data-url="/klaytn-cypress-setup-workshop/40_configure_network/60_datadog_configuration.html">
+    <nav id="sidebar" class="showVisitedLinks">
+
+
+
+  <div id="header-wrapper">
+    <div id="header">
+      <a href=".."><img src="/klaytn-cypress-setup-workshop/images/Logo-2.png" ></a>
+
+    </div>
+    
+        <div class="searchbox">
+    <label for="search-by"><i class="fas fa-search"></i></label>
+    <input data-search-input id="search-by" type="search" placeholder="Search...">
+    <span data-search-clear=""><i class="fas fa-times"></i></span>
+</div>
+
+<script type="text/javascript" src="/klaytn-cypress-setup-workshop/js/lunr.min.js?1658305832"></script>
+<script type="text/javascript" src="/klaytn-cypress-setup-workshop/js/auto-complete.js?1658305832"></script>
+<script type="text/javascript">
+    
+        var baseurl = "\/klaytn-cypress-setup-workshop";
+    
+</script>
+<script type="text/javascript" src="/klaytn-cypress-setup-workshop/js/search.js?1658305832"></script>
+
+    
+  </div>
+  
+
+    <div class="highlightable">
+    <ul class="topics">
+
+        
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/10_prerequisites.html" title="Prerequisites" class="dd-item
+        
+        
+        
+        ">
+      <a href="/klaytn-cypress-setup-workshop/10_prerequisites.html">
+          <b>1. </b>Prerequisites
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/10_prerequisites/10_firewall_configuration.html" title="Firewall Configuration" class="dd-item ">
+        <a href="/klaytn-cypress-setup-workshop/10_prerequisites/10_firewall_configuration.html">
+        <b>A. </b>Firewall Configuration
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/10_prerequisites/20_package_installation.html" title="Package Installation" class="dd-item ">
+        <a href="/klaytn-cypress-setup-workshop/10_prerequisites/20_package_installation.html">
+        <b>B. </b>Package Installation
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/20_network_reset.html" title="Reset Network Configuration" class="dd-item
+        
+        
+        
+        ">
+      <a href="/klaytn-cypress-setup-workshop/20_network_reset.html">
+          <b>2. </b>Reset Network Configuration
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/20_network_reset/10_stop_klaytn.html" title="Stop the Klaytn service" class="dd-item ">
+        <a href="/klaytn-cypress-setup-workshop/20_network_reset/10_stop_klaytn.html">
+        <b>A. </b>Stop the Klaytn service
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/20_network_reset/20_stop_telegraf.html" title="Stop the Telegraf service" class="dd-item ">
+        <a href="/klaytn-cypress-setup-workshop/20_network_reset/20_stop_telegraf.html">
+        <b>B. </b>Stop the Telegraf service
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/20_network_reset/30_remove_data_and_log.html" title="Remove chaindata and log" class="dd-item ">
+        <a href="/klaytn-cypress-setup-workshop/20_network_reset/30_remove_data_and_log.html">
+        <b>C. </b>Remove chaindata and log
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/30_download_chaindata.html" title="Fast Sync with Cypress" class="dd-item
+        
+        
+        
+        ">
+      <a href="/klaytn-cypress-setup-workshop/30_download_chaindata.html">
+          <b>3. </b>Fast Sync with Cypress
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/30_download_chaindata/10_download_chaindata.html" title="Download the latest Cypress chaindata" class="dd-item ">
+        <a href="/klaytn-cypress-setup-workshop/30_download_chaindata/10_download_chaindata.html">
+        <b>A. </b>Download the latest Cypress chaindata
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/30_download_chaindata/20_unarchive_chaindata.html" title="Extract the chaindata" class="dd-item ">
+        <a href="/klaytn-cypress-setup-workshop/30_download_chaindata/20_unarchive_chaindata.html">
+        <b>B. </b>Extract the chaindata
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/30_download_chaindata/30_remove_chaindata.html" title="Remove Chaindata" class="dd-item ">
+        <a href="/klaytn-cypress-setup-workshop/30_download_chaindata/30_remove_chaindata.html">
+        <b>C. </b>Remove Chaindata
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/40_configure_network.html" title="Configure Cypress Network" class="dd-item
+        parent
+        
+        
+        ">
+      <a href="/klaytn-cypress-setup-workshop/40_configure_network.html">
+          <b>4. </b>Configure Cypress Network
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/40_configure_network/10_prepare_genesis_for_cypress.html" title="Prepare genesis.json for Cypress network" class="dd-item ">
+        <a href="/klaytn-cypress-setup-workshop/40_configure_network/10_prepare_genesis_for_cypress.html">
+        <b>A. </b>Prepare genesis.json for Cypress network
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/40_configure_network/20_node_configuration.html" title="Node Configuration" class="dd-item ">
+        <a href="/klaytn-cypress-setup-workshop/40_configure_network/20_node_configuration.html">
+        <b>B. </b>Node Configuration
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/40_configure_network/30_pn_configuration.html" title="PN static-nodes.json" class="dd-item ">
+        <a href="/klaytn-cypress-setup-workshop/40_configure_network/30_pn_configuration.html">
+        <b>C. </b>PN static-nodes.json
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/40_configure_network/40_node_initialization.html" title="Node Initialization" class="dd-item ">
+        <a href="/klaytn-cypress-setup-workshop/40_configure_network/40_node_initialization.html">
+        <b>D. </b>Node Initialization
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/40_configure_network/50_telegraf_configuration.html" title="Telegraf Configuration" class="dd-item ">
+        <a href="/klaytn-cypress-setup-workshop/40_configure_network/50_telegraf_configuration.html">
+        <b>E. </b>Telegraf Configuration
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/40_configure_network/60_datadog_configuration.html" title="Datadog Configuration" class="dd-item active">
+        <a href="/klaytn-cypress-setup-workshop/40_configure_network/60_datadog_configuration.html">
+        <b>F. </b>Datadog Configuration
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/50_start_services.html" title="Start the services" class="dd-item
+        
+        
+        
+        ">
+      <a href="/klaytn-cypress-setup-workshop/50_start_services.html">
+          <b>5. </b>Start the services
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/50_start_services/10_start_klaytn_service.html" title="Start the klaytn services" class="dd-item ">
+        <a href="/klaytn-cypress-setup-workshop/50_start_services/10_start_klaytn_service.html">
+        <b>A. </b>Start the klaytn services
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/50_start_services/20_start_monitoring_services.html" title="Start the Telegraf service" class="dd-item ">
+        <a href="/klaytn-cypress-setup-workshop/50_start_services/20_start_monitoring_services.html">
+        <b>B. </b>Start the Telegraf service
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/50_start_services/30_check_the_services.html" title="Check the services" class="dd-item ">
+        <a href="/klaytn-cypress-setup-workshop/50_start_services/30_check_the_services.html">
+        <b>C. </b>Check the services
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/50_start_services/40_check_monitoring_dashboard.html" title="Check Monitoring Dashboard" class="dd-item ">
+        <a href="/klaytn-cypress-setup-workshop/50_start_services/40_check_monitoring_dashboard.html">
+        <b>D. </b>Check Monitoring Dashboard
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/60_conclusion.html" title="Conclusion" class="dd-item
+        
+        
+        
+        ">
+      <a href="/klaytn-cypress-setup-workshop/60_conclusion.html">
+          <b>6. </b>Conclusion
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+    </li>
+  
+ 
+
+          
+        
+    </ul>
+
+    
+    
+      <section id="shortcuts">
+        <h3>More</h3>
+        <ul>
+          
+              <li>
+                  <a class="padding" href="https://github.com/klaytn/klaytn-cypress-setup-workshop"><i class='fab fa-github'></i> Workshop Github repo</a>
+              </li>
+          
+              <li>
+                  <a class="padding" href="https://docs.klaytn.foundation/"><i class='fas fa-bookmark'></i> Klaytn Documentation</a>
+              </li>
+          
+              <li>
+                  <a class="padding" href="https://klaytn.foundation/"><i class='fas fa-bullhorn'></i> Klaytn Foundation</a>
+              </li>
+          
+        </ul>
+      </section>
+    
+
+    
+    <section id="prefooter">
+      <hr/>
+      <ul>
+      
+
+      
+        <li><a class="padding" href="#" data-clear-history-toggle=""><i class="fas fa-history fa-fw"></i> Clear History</a></li>
+      
+      </ul>
+    </section>
+    
+    <section id="footer">
+      <p>© Klaytn Foundation 2022. All rights reserved.</p>
+    </section>
+  </div>
+</nav>
+
+
+
+
+        <section id="body">
+        <div id="overlay"></div>
+        <div class="padding highlightable">
+              
+              <div>
+                <div id="top-bar">
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fas fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span id="toc-menu"><i class="fas fa-list-alt"></i></span>
+                  
+                  <span class="links">
+                 
+                 
+                   Datadog Configuration
+                 
+                  </span>
+                </div>
+                
+                    <div class="progress">
+    <div class="wrapper">
+<nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+    </div>
+</div>
+
+                
+              </div>
+            </div>
+            
+        <div id="head-tags">
+        
+        </div>
+        
+        <div id="body-inner">
+          
+            <h1>
+              
+              Datadog Configuration
+            </h1>
+          
+
+        
+
+
+<br />
+
+<h4 id="2-for-additional-monitoring-we-are-planning-to-use-datadog-as-well-please-follow-this-step-for-datadog-installation">2. For additional monitoring, we are planning to use Datadog as well. Please follow this step for Datadog installation.</h4>
+<h5 id="1-for-cn">1) For CN,</h5>
+<p><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>$ DD_API_KEY=&#34;DATADOG API KEY&#34; HOST_NAME=&#34;CN HOSTNAME&#34; NODE_TYPE=cn INSTANCE=cn LOG_DIR=&#34;&lt;<span style="color:#f92672">your_klaytn_home_path</span>&gt;/kcnd/log/kcnd.out&#34; bash -c &#34;$(curl -L https://raw.githubusercontent.com/klaytn/datadog-agent-install./main/install-datadog-agent.sh)&#34;</span></span></code></pre></div>
+<em>** DD_API_KEY will be shared with you by Slack DM.</em><br>
+<em>** Please use lowercase, then append &lsquo;cn&rsquo; for HOST_NAME</em><br>
+<em>** For example, <code>LOG_DIR = /data/kcnd/log/kcnd.out, HOST_NAME=netmarble-cn</code></em></p>
+<h5 id="2-for-pn">2) For PN,</h5>
+<p><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>$ DD_API_KEY=&#34;DATADOG API KEY&#34; HOST_NAME=&#34;PN HOSTNAME&#34; NODE_TYPE=pn INSTANCE=pn1 bash -c &#34;$(curl -L https://raw.githubusercontent.com/klaytn/datadog-agent-install./main/install-datadog-agent.sh)&#34;</span></span></code></pre></div>
+<em>** DD_API_KEY will be shared with you by Slack DM.</em><br>
+<em>** Please use lowercase, then append &lsquo;pn1&rsquo; or &lsquo;pn2&rsquo; for HOST_NAME</em><br>
+<em>** For example, <code>LOG_DIR = /data/kcnd/log/kcnd.out, HOST_NAME=netmarble-pn1</code></em></p>
+<h4 id="3-to-allow-your-nodes-to-communicate-datadog-please-add-these-ip-addresses-to-the-firewall-of-each-node">3. To allow your nodes to communicate Datadog, please add these IP addresses to the firewall of each node.</h4>
+<h5 id="port-number-443-3233144020">Port number 443 <code>3.233.144.0/20</code></h5>
+<h5 id="port-number-10516-32331526332">Port number 10516 <code>3.233.152.63/32</code></h5>
+<p><br />
+
+If you finish this step, please click the next button <code>&gt;</code> on the right side of this page.</p>
+
+
+<footer class="footline">
+	
+</footer>
+
+        
+        </div>
+        
+
+      </div>
+
+    <div id="navigation">
+        
+        
+
+        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+
+        
+
+
+	 
+	 
+		
+			<a class="nav nav-prev" href="/klaytn-cypress-setup-workshop/40_configure_network/50_telegraf_configuration.html" title="Telegraf Configuration"> <i class="fa fa-chevron-left"></i></a>
+		
+		
+			<a class="nav nav-next" href="/klaytn-cypress-setup-workshop/50_start_services.html" title="Start the services" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+		
+	
+    </div>
+
+    </section>
+
+    <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
+      <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
+    </div>
+    <script src="/klaytn-cypress-setup-workshop/js/clipboard.min.js?1658305832"></script>
+    <script src="/klaytn-cypress-setup-workshop/js/perfect-scrollbar.min.js?1658305832"></script>
+    <script src="/klaytn-cypress-setup-workshop/js/perfect-scrollbar.jquery.min.js?1658305832"></script>
+    <script src="/klaytn-cypress-setup-workshop/js/jquery.sticky.js?1658305832"></script>
+    <script src="/klaytn-cypress-setup-workshop/js/featherlight.min.js?1658305832"></script>
+    <script src="/klaytn-cypress-setup-workshop/js/highlight.pack.js?1658305832"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script src="/klaytn-cypress-setup-workshop/js/modernizr.custom-3.6.0.js?1658305832"></script>
+    <script src="/klaytn-cypress-setup-workshop/js/learn.js?1658305832"></script>
+    <script src="/klaytn-cypress-setup-workshop/js/hugo-learn.js?1658305832"></script>
+    
+        
+            <script src="https://unpkg.com/mermaid@8.8.0/dist/mermaid.min.js"></script>
+        
+        <script>
+            mermaid.initialize({ startOnLoad: true });
+        </script>
+    
+    
+
+  </body>
+</html>
+

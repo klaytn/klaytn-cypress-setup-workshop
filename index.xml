@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Klaytn - CCO Onboarding - Cypress on Klaytn CCO Onboarding - Cypress</title>
+    <link>/klaytn-cypress-setup-workshop/</link>
+    <description>Recent content in Klaytn - CCO Onboarding - Cypress on Klaytn CCO Onboarding - Cypress</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 11 Jul 2022 10:01:37 +0900</lastBuildDate><atom:link href="/klaytn-cypress-setup-workshop/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Firewall Configuration</title>
+      <link>/klaytn-cypress-setup-workshop/10_prerequisites/10_firewall_configuration.html</link>
+      <pubDate>Mon, 11 Jul 2022 19:18:45 +0900</pubDate>
+      
+      <guid>/klaytn-cypress-setup-workshop/10_prerequisites/10_firewall_configuration.html</guid>
+      <description>1. (Only for CN) Firewall configuration 1) If Baobab validation is completed, remove below Klaytn CN&amp;rsquo;s IP address of Baobab from your firewall ingress rule. 54.180.180.202
+54.180.18.176
+52.79.134.72
+52.78.232.39
+2) For communication and multichannel between Cypress CN, allow TCP 32323-32324 with below IP addresses to your firewall ingress rule. 52.187.181.245 13.250.156.19 18.181.103.22 13.251.72.113 15.164.153.242 52.78.129.138 183.110.37.118 3.114.52.253 13.115.105.184 3.112.138.154 13.124.195.223 52.68.240.46 54.254.44.48 3.37.228.174 3.1.128.148 52.221.66.32 13.250.248.137 52.194.171.123 18.136.27.69 121.53.201.23 223.</description>
+    </item>
+    
+    <item>
+      <title>Start the klaytn services</title>
+      <link>/klaytn-cypress-setup-workshop/50_start_services/10_start_klaytn_service.html</link>
+      <pubDate>Mon, 11 Jul 2022 18:37:31 +0900</pubDate>
+      
+      <guid>/klaytn-cypress-setup-workshop/50_start_services/10_start_klaytn_service.html</guid>
+      <description>1. Start the Klaytn service, if it is running. 1) For CN, $ sudo systemctl status kcnd $ sudo systemctl start kcnd $ sudo systemctl status kcnd 2) For PN, $ sudo systemctl status kpnd $ sudo systemctl start kpnd $ sudo systemctl status kpnd 3) If the services are not installed from yum, you can start the service like below, $ sudo &amp;lt;installation_path&amp;gt;/kcnd status $ sudo &amp;lt;installation_path&amp;gt;/kcnd start $ sudo &amp;lt;installation_path&amp;gt;/kcnd status If you finish this step, please click the next button &amp;gt; on the right side of this page.</description>
+    </item>
+    
+    <item>
+      <title>Prepare genesis.json for Cypress network</title>
+      <link>/klaytn-cypress-setup-workshop/40_configure_network/10_prepare_genesis_for_cypress.html</link>
+      <pubDate>Mon, 11 Jul 2022 17:10:58 +0900</pubDate>
+      
+      <guid>/klaytn-cypress-setup-workshop/40_configure_network/10_prepare_genesis_for_cypress.html</guid>
+      <description>1. Remove or backup existing genesis.json for Baobab. 1) For CN, $ mv &amp;lt;your_klaytn_home_path&amp;gt;/kcnd/data/genesis.json &amp;lt;your_klaytn_home_path&amp;gt;/kcnd/data/genesis.json.baobab 2) For PN, $ mv &amp;lt;your_klaytn_home_path&amp;gt;/kpnd/data/genesis.json &amp;lt;your_klaytn_home_path&amp;gt;/kpnd/data/genesis.json.baobab 2. Download the genesis.json for Cypress network. 1) For CN, $ curl -X GET https://packages.klaytn.net/cypress/genesis.json -o &amp;lt;your_klaytn_home_path&amp;gt;/kcnd/data/genesis.json 2) For PN, $ curl -X GET https://packages.klaytn.net/cypress/genesis.json -o &amp;lt;your_klaytn_home_path&amp;gt;/kpnd/data/genesis.json 3. Check the value of chainId in the genesis.json downloaded. ** Please note that Cypress network id is 8217.
+1) For CN, $ grep &amp;#34;chainId&amp;#34; &amp;lt;your_klaytn_home_path&amp;gt;/kcnd/data/genesis.</description>
+    </item>
+    
+    <item>
+      <title>Download the latest Cypress chaindata</title>
+      <link>/klaytn-cypress-setup-workshop/30_download_chaindata/10_download_chaindata.html</link>
+      <pubDate>Mon, 11 Jul 2022 15:42:53 +0900</pubDate>
+      
+      <guid>/klaytn-cypress-setup-workshop/30_download_chaindata/10_download_chaindata.html</guid>
+      <description>1. Download the latest chaindata snapshot from the Cypress snapshot archive. 0) Before proceeding, please check if your disk space is enough to store and extract the Cypress chaindata. ** You can refer to the chaindata size via Cypress snapshot archive where the Cypress chaindata snapshots have been snapshotted.
+1) Download the latest one from the archive. ** Please note that this step will take a lot of time to download since snapshot is more than 700 GB.</description>
+    </item>
+    
+    <item>
+      <title>Stop the Klaytn service</title>
+      <link>/klaytn-cypress-setup-workshop/20_network_reset/10_stop_klaytn.html</link>
+      <pubDate>Mon, 11 Jul 2022 15:16:17 +0900</pubDate>
+      
+      <guid>/klaytn-cypress-setup-workshop/20_network_reset/10_stop_klaytn.html</guid>
+      <description>1. Stop the Klaytn service, if it is running. 1) For CN, $ sudo systemctl status kcnd $ sudo systemctl stop kcnd $ sudo systemctl status kcnd 2) For PN, $ sudo systemctl status kpnd $ sudo systemctl stop kpnd $ sudo systemctl status kpnd 3) If the services are not installed from yum, you can stop the service like below, $ sudo &amp;lt;installation_path&amp;gt;/kcnd status $ sudo &amp;lt;installation_path&amp;gt;/kcnd stop $ sudo &amp;lt;installation_path&amp;gt;/kcnd status If you finish this step, please click the next button &amp;gt; on the right side of this page.</description>
+    </item>
+    
+    <item>
+      <title>Package Installation</title>
+      <link>/klaytn-cypress-setup-workshop/10_prerequisites/20_package_installation.html</link>
+      <pubDate>Mon, 11 Jul 2022 19:18:57 +0900</pubDate>
+      
+      <guid>/klaytn-cypress-setup-workshop/10_prerequisites/20_package_installation.html</guid>
+      <description>2. Installation of Klaytn packages for CN and PN ** We&amp;rsquo;ve already installed packages during the Pre-cypress stage. If you need to install newly, please refer these documents.
+1) CN - https://docs.klaytn.foundation/node/core-cell/installation-guide/consensus-node-setup/installation-guide 2) PN - https://docs.klaytn.foundation/node/core-cell/installation-guide/proxy-node-setup/installation-guide If you finish this step, please click the next button &amp;gt; on the right side of this page.</description>
+    </item>
+    
+    <item>
+      <title>Start the Telegraf service</title>
+      <link>/klaytn-cypress-setup-workshop/50_start_services/20_start_monitoring_services.html</link>
+      <pubDate>Mon, 11 Jul 2022 18:39:03 +0900</pubDate>
+      
+      <guid>/klaytn-cypress-setup-workshop/50_start_services/20_start_monitoring_services.html</guid>
+      <description>2. Start monitoring services. 1) For both CN and PN, start the Telegraf service. $ sudo systemctl status telegraf $ sudo systemctl start telegraf $ sudo systemctl status telegraf 2) For both CN and PN, start the Datadog service if it is stopped. $ sudo systemctl status datadog-agent $ sudo systemctl start datadog-agent $ sudo systemctl status datadog-agent If you finish this step, please click the next button &amp;gt; on the right side of this page.</description>
+    </item>
+    
+    <item>
+      <title>Node Configuration</title>
+      <link>/klaytn-cypress-setup-workshop/40_configure_network/20_node_configuration.html</link>
+      <pubDate>Mon, 11 Jul 2022 17:55:05 +0900</pubDate>
+      
+      <guid>/klaytn-cypress-setup-workshop/40_configure_network/20_node_configuration.html</guid>
+      <description>1. Modify network, discovery and boot node information. ** Note that CN and PN have some different information.
+1) For CN, your configuration should be modified as shown below. $ egrep &amp;#34;^NETWORK|NO_DISCOVER|BOOTNODES&amp;#34; /etc/kcnd/conf/kcnd.conf NETWORK=&amp;#34;cypress&amp;#34; NETWORK_ID= NO_DISCOVER=0 # setting 1 to disable discovery BOOTNODES=&amp;#34;kni://8e1881cdca97f52a76c6d2683db030f51a34ffc039476b4ed5bc5c757de1b5ce48fea1e53aa182a6ac2b076460881d50d3b57461d1cf36fae777e992893ad485@52.199.8.244:32323?discport=32323&amp;amp;ntype=bn&amp;#34; 2) For PN, your configuration should be modified as shown below. $ egrep &amp;#34;^NETWORK|NO_DISCOVER|BOOTNODES&amp;#34; /etc/kpnd/conf/kpnd.conf NETWORK=&amp;#34;cypress&amp;#34; NETWORK_ID= NO_DISCOVER=0 # setting 1 to disable discovery BOOTNODES=&amp;#34;kni://b286e4140aea469992146c299f8915e34d59a014c29a045de41e578014761114176f42dece34a54ce1e37f92ab981fe1bb14e54fe23576e1182778c40e6272a2@ston146.cypress.klaytn.net:32323?ntype=bn,kni://a6b61ee786952e3f8b681867d2535485622e80d0b9b7b89f26b2c631e59a4246b5f879487fbde7c324c3308ece0cdb1d7738430bdffce4f7f8c4f5a09eef80a3@ston738.cypress.klaytn.net:32323?ntype=bn,kni://b25838727eb6b4631c8f8910b4f6376fe28041f251ee21129078a61d18d62d0dc2601be5a97eab8bdb5772309f861fddb7192935483813ef20e5716a34266f16@ston903.cypress.klaytn.net:32323?ntype=bn&amp;#34; If you finish this step, please click the next button &amp;gt; on the right side of this page.</description>
+    </item>
+    
+    <item>
+      <title>Extract the chaindata</title>
+      <link>/klaytn-cypress-setup-workshop/30_download_chaindata/20_unarchive_chaindata.html</link>
+      <pubDate>Mon, 11 Jul 2022 15:43:06 +0900</pubDate>
+      
+      <guid>/klaytn-cypress-setup-workshop/30_download_chaindata/20_unarchive_chaindata.html</guid>
+      <description>2. Extract the chaindata downloaded to the DATA_DIR. 1) For CN, $ tar -C &amp;lt;your_klaytn_home_path&amp;gt;/kcnd/data -xvf klaytn-cypress-chaindata-20220719010712.tar.gz ** If you want to reduce the time for extracting, please refer this pigz example. (Amazon Linux 2) $ sudo amazon-linux-extras install epel (CentOS) $ sudo yum install epel-release -y $ sudo yum install pigz $ tar -I pigz -C &amp;lt;your_klaytn_home_path&amp;gt;/kcnd/data -xvf klaytn-cypress-chaindata-20220719010712.tar.gz
+2) For PN, $ tar -C &amp;lt;your_klaytn_home_path&amp;gt;/kpnd/data -xvf klaytn-cypress-chaindata-20220719010712.tar.gz If you finish this step, please click the next button &amp;gt; on the right side of this page.</description>
+    </item>
+    
+    <item>
+      <title>Stop the Telegraf service</title>
+      <link>/klaytn-cypress-setup-workshop/20_network_reset/20_stop_telegraf.html</link>
+      <pubDate>Mon, 11 Jul 2022 15:16:34 +0900</pubDate>
+      
+      <guid>/klaytn-cypress-setup-workshop/20_network_reset/20_stop_telegraf.html</guid>
+      <description>2. Stop the Telegraf service, if it is running. 1) For both CN and PN, $ sudo systemctl status telegraf $ sudo systemctl stop telegraf $ sudo systemctl status telegraf If you finish this step, please click the next button &amp;gt; on the right side of this page.</description>
+    </item>
+    
+    <item>
+      <title>Remove Chaindata</title>
+      <link>/klaytn-cypress-setup-workshop/30_download_chaindata/30_remove_chaindata.html</link>
+      <pubDate>Thu, 14 Jul 2022 19:26:47 +0900</pubDate>
+      
+      <guid>/klaytn-cypress-setup-workshop/30_download_chaindata/30_remove_chaindata.html</guid>
+      <description>3. You can remove the chaindata downloaded, if the previous step is completed. 1) For both CN and PN, $ rm klaytn-cypress-chaindata-20220719010712.tar.gz If you finish this step, please click the next button &amp;gt; on the right side of this page.</description>
+    </item>
+    
+    <item>
+      <title>Check the services</title>
+      <link>/klaytn-cypress-setup-workshop/50_start_services/30_check_the_services.html</link>
+      <pubDate>Mon, 11 Jul 2022 18:42:35 +0900</pubDate>
+      
+      <guid>/klaytn-cypress-setup-workshop/50_start_services/30_check_the_services.html</guid>
+      <description>3. Watch the service log to confirm if your nodes are correctly joined. ** If the node is not a proposer at that block, and the consensus is successful, the node have executed(==validates) the block. In other words, a block is inserted. _** You can refer this document for more details about node log.
+1) For CN, $ tail &amp;lt;your_klaytn_home_path&amp;gt;/kcnd/log/kcnd.out INFO Inserted a new block number=14 hash=13cbfc…f007fc txs=0 gas=0 elapsed=793.</description>
+    </item>
+    
+    <item>
+      <title>PN static-nodes.json</title>
+      <link>/klaytn-cypress-setup-workshop/40_configure_network/30_pn_configuration.html</link>
+      <pubDate>Mon, 11 Jul 2022 17:55:05 +0900</pubDate>
+      
+      <guid>/klaytn-cypress-setup-workshop/40_configure_network/30_pn_configuration.html</guid>
+      <description>2. Check if the static-nodes.json has correct information for your PN. ** Unlike CN, PN uses a static-nodes.json file to find out where to connect and PNN consists of PNs within the Cypress network topology. https://docs.klaytn.foundation/klaytn#tiered-networks
+Typically, PNs maintain just one connection with a PN in a neighboring Core Cell. The number of peer connections is subject to change depending on the network configuration. 1) For Thrust , PN1 [ &amp;#34;CN_KNI_ADDRESS@CN_INTERNAL_IP:PORT?</description>
+    </item>
+    
+    <item>
+      <title>Remove chaindata and log</title>
+      <link>/klaytn-cypress-setup-workshop/20_network_reset/30_remove_data_and_log.html</link>
+      <pubDate>Mon, 11 Jul 2022 15:17:04 +0900</pubDate>
+      
+      <guid>/klaytn-cypress-setup-workshop/20_network_reset/30_remove_data_and_log.html</guid>
+      <description>3. Remove existing chaindata and log for pre-cypress. 0) During pre-cypress, you did set &amp;lt;klaytn_home_path&amp;gt; for Ansible deployment. But you can check this out if you can&amp;rsquo;t remember where your data directory is located. $ grep &amp;#34;DATA_DIR&amp;#34; /etc/kpnd/conf/kpnd.conf 1) For CN, $ sudo rm -Rf &amp;lt;your_klaytn_home_path&amp;gt;/kcnd/data/klay/chaindata $ sudo rm -Rf &amp;lt;your_klaytn_home_path&amp;gt;/kcnd/data/klay/lightchaindata $ sudo rm -Rf &amp;lt;your_klaytn_home_path&amp;gt;/kcnd/log/* 2) For PN, $ sudo rm -Rf &amp;lt;your_klaytn_home_path&amp;gt;/kpnd/data/klay/chaindata $ sudo rm -Rf &amp;lt;your_klaytn_home_path&amp;gt;/kpnd/data/klay/lightchaindata $ sudo rm -Rf &amp;lt;your_klaytn_home_path&amp;gt;/kpnd/log/* If you finish this step, please click the next button &amp;gt; on the right side of this page.</description>
+    </item>
+    
+    <item>
+      <title>Check Monitoring Dashboard</title>
+      <link>/klaytn-cypress-setup-workshop/50_start_services/40_check_monitoring_dashboard.html</link>
+      <pubDate>Thu, 14 Jul 2022 19:11:35 +0900</pubDate>
+      
+      <guid>/klaytn-cypress-setup-workshop/50_start_services/40_check_monitoring_dashboard.html</guid>
+      <description>4. Take a look at Grafana dashboard to confirm if your nodes are correctly joined to Cypress network. Link : Cypress Grafana ** You can refer this document to check your services further.
+https://docs.klaytn.foundation/node/core-cell/installation-guide/testing-the-core-cell#kcn-console-kpn-console If your nodes are shown and CN/PN Inter Connections looks 2 in this dashboard, everything is configured normally. Please send a message to Klaytn DevOps by Slack channel #cco_7th_batch. If you finish this step, please click the next button &amp;gt; on the right side of this page.</description>
+    </item>
+    
+    <item>
+      <title>Node Initialization</title>
+      <link>/klaytn-cypress-setup-workshop/40_configure_network/40_node_initialization.html</link>
+      <pubDate>Mon, 11 Jul 2022 17:23:03 +0900</pubDate>
+      
+      <guid>/klaytn-cypress-setup-workshop/40_configure_network/40_node_initialization.html</guid>
+      <description>1. Now, we will initialize each node using the Cypress genesis file. 1) For CN, $ cd &amp;lt;your_klaytn_home_path&amp;gt;/kcnd/data $ kcn --networkid 8217 init --datadir &amp;lt;your_klaytn_home_path&amp;gt;/kcnd/data genesis.json 2) For PN, $ cd &amp;lt;your_klaytn_home_path&amp;gt;/kpnd/data $ kcn --networkid 8217 init --datadir &amp;lt;your_klaytn_home_path&amp;gt;/kpnd/data genesis.json If you finish this step, please click the next button &amp;gt; on the right side of this page.</description>
+    </item>
+    
+    <item>
+      <title>Telegraf Configuration</title>
+      <link>/klaytn-cypress-setup-workshop/40_configure_network/50_telegraf_configuration.html</link>
+      <pubDate>Thu, 14 Jul 2022 16:44:50 +0900</pubDate>
+      
+      <guid>/klaytn-cypress-setup-workshop/40_configure_network/50_telegraf_configuration.html</guid>
+      <description>1. To monitor your nodes in Cypress Dashboard, please change the influxdb configuration as below: 1) For both CN and PN, $ grep -A2 &amp;#34;influxdb&amp;#34; /etc/telegraf/telegraf.d/klaytn.conf [[outputs.influxdb]] urls = [ &amp;#34;http://13.209.53.161:45560&amp;#34; ] database = &amp;#34;klaytn_cypress&amp;#34; If you finish this step, please click the next button &amp;gt; on the right side of this page.</description>
+    </item>
+    
+    <item>
+      <title>Datadog Configuration</title>
+      <link>/klaytn-cypress-setup-workshop/40_configure_network/60_datadog_configuration.html</link>
+      <pubDate>Wed, 20 Jul 2022 15:33:50 +0900</pubDate>
+      
+      <guid>/klaytn-cypress-setup-workshop/40_configure_network/60_datadog_configuration.html</guid>
+      <description>2. For additional monitoring, we are planning to use Datadog as well. Please follow this step for Datadog installation. 1) For CN, $ DD_API_KEY=&amp;#34;DATADOG API KEY&amp;#34; HOST_NAME=&amp;#34;CN HOSTNAME&amp;#34; NODE_TYPE=cn INSTANCE=cn LOG_DIR=&amp;#34;&amp;lt;your_klaytn_home_path&amp;gt;/kcnd/log/kcnd.out&amp;#34; bash -c &amp;#34;$(curl -L https://raw.githubusercontent.com/klaytn/datadog-agent-install./main/install-datadog-agent.sh)&amp;#34; ** DD_API_KEY will be shared with you by Slack DM.
+** Please use lowercase, then append &amp;lsquo;cn&amp;rsquo; for HOST_NAME
+** For example, LOG_DIR = /data/kcnd/log/kcnd.out, HOST_NAME=netmarble-cn
+2) For PN, $ DD_API_KEY=&amp;#34;DATADOG API KEY&amp;#34; HOST_NAME=&amp;#34;PN HOSTNAME&amp;#34; NODE_TYPE=pn INSTANCE=pn1 bash -c &amp;#34;$(curl -L https://raw.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Configure Cypress Network on Klaytn CCO Onboarding - Cypress</title>
+    <link>/klaytn-cypress-setup-workshop/40_configure_network.html</link>
+    <description>Recent content in Configure Cypress Network on Klaytn CCO Onboarding - Cypress</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 11 Jul 2022 10:25:55 +0900</lastBuildDate><atom:link href="/klaytn-cypress-setup-workshop/40_configure_network/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Prepare genesis.json for Cypress network</title>
+      <link>/klaytn-cypress-setup-workshop/40_configure_network/10_prepare_genesis_for_cypress.html</link>
+      <pubDate>Mon, 11 Jul 2022 17:10:58 +0900</pubDate>
+      
+      <guid>/klaytn-cypress-setup-workshop/40_configure_network/10_prepare_genesis_for_cypress.html</guid>
+      <description>1. Remove or backup existing genesis.json for Baobab. 1) For CN, $ mv &amp;lt;your_klaytn_home_path&amp;gt;/kcnd/data/genesis.json &amp;lt;your_klaytn_home_path&amp;gt;/kcnd/data/genesis.json.baobab 2) For PN, $ mv &amp;lt;your_klaytn_home_path&amp;gt;/kpnd/data/genesis.json &amp;lt;your_klaytn_home_path&amp;gt;/kpnd/data/genesis.json.baobab 2. Download the genesis.json for Cypress network. 1) For CN, $ curl -X GET https://packages.klaytn.net/cypress/genesis.json -o &amp;lt;your_klaytn_home_path&amp;gt;/kcnd/data/genesis.json 2) For PN, $ curl -X GET https://packages.klaytn.net/cypress/genesis.json -o &amp;lt;your_klaytn_home_path&amp;gt;/kpnd/data/genesis.json 3. Check the value of chainId in the genesis.json downloaded. ** Please note that Cypress network id is 8217.
+1) For CN, $ grep &amp;#34;chainId&amp;#34; &amp;lt;your_klaytn_home_path&amp;gt;/kcnd/data/genesis.</description>
+    </item>
+    
+    <item>
+      <title>Node Configuration</title>
+      <link>/klaytn-cypress-setup-workshop/40_configure_network/20_node_configuration.html</link>
+      <pubDate>Mon, 11 Jul 2022 17:55:05 +0900</pubDate>
+      
+      <guid>/klaytn-cypress-setup-workshop/40_configure_network/20_node_configuration.html</guid>
+      <description>1. Modify network, discovery and boot node information. ** Note that CN and PN have some different information.
+1) For CN, your configuration should be modified as shown below. $ egrep &amp;#34;^NETWORK|NO_DISCOVER|BOOTNODES&amp;#34; /etc/kcnd/conf/kcnd.conf NETWORK=&amp;#34;cypress&amp;#34; NETWORK_ID= NO_DISCOVER=0 # setting 1 to disable discovery BOOTNODES=&amp;#34;kni://8e1881cdca97f52a76c6d2683db030f51a34ffc039476b4ed5bc5c757de1b5ce48fea1e53aa182a6ac2b076460881d50d3b57461d1cf36fae777e992893ad485@52.199.8.244:32323?discport=32323&amp;amp;ntype=bn&amp;#34; 2) For PN, your configuration should be modified as shown below. $ egrep &amp;#34;^NETWORK|NO_DISCOVER|BOOTNODES&amp;#34; /etc/kpnd/conf/kpnd.conf NETWORK=&amp;#34;cypress&amp;#34; NETWORK_ID= NO_DISCOVER=0 # setting 1 to disable discovery BOOTNODES=&amp;#34;kni://b286e4140aea469992146c299f8915e34d59a014c29a045de41e578014761114176f42dece34a54ce1e37f92ab981fe1bb14e54fe23576e1182778c40e6272a2@ston146.cypress.klaytn.net:32323?ntype=bn,kni://a6b61ee786952e3f8b681867d2535485622e80d0b9b7b89f26b2c631e59a4246b5f879487fbde7c324c3308ece0cdb1d7738430bdffce4f7f8c4f5a09eef80a3@ston738.cypress.klaytn.net:32323?ntype=bn,kni://b25838727eb6b4631c8f8910b4f6376fe28041f251ee21129078a61d18d62d0dc2601be5a97eab8bdb5772309f861fddb7192935483813ef20e5716a34266f16@ston903.cypress.klaytn.net:32323?ntype=bn&amp;#34; If you finish this step, please click the next button &amp;gt; on the right side of this page.</description>
+    </item>
+    
+    <item>
+      <title>PN static-nodes.json</title>
+      <link>/klaytn-cypress-setup-workshop/40_configure_network/30_pn_configuration.html</link>
+      <pubDate>Mon, 11 Jul 2022 17:55:05 +0900</pubDate>
+      
+      <guid>/klaytn-cypress-setup-workshop/40_configure_network/30_pn_configuration.html</guid>
+      <description>2. Check if the static-nodes.json has correct information for your PN. ** Unlike CN, PN uses a static-nodes.json file to find out where to connect and PNN consists of PNs within the Cypress network topology. https://docs.klaytn.foundation/klaytn#tiered-networks
+Typically, PNs maintain just one connection with a PN in a neighboring Core Cell. The number of peer connections is subject to change depending on the network configuration. 1) For Thrust , PN1 [ &amp;#34;CN_KNI_ADDRESS@CN_INTERNAL_IP:PORT?</description>
+    </item>
+    
+    <item>
+      <title>Node Initialization</title>
+      <link>/klaytn-cypress-setup-workshop/40_configure_network/40_node_initialization.html</link>
+      <pubDate>Mon, 11 Jul 2022 17:23:03 +0900</pubDate>
+      
+      <guid>/klaytn-cypress-setup-workshop/40_configure_network/40_node_initialization.html</guid>
+      <description>1. Now, we will initialize each node using the Cypress genesis file. 1) For CN, $ cd &amp;lt;your_klaytn_home_path&amp;gt;/kcnd/data $ kcn --networkid 8217 init --datadir &amp;lt;your_klaytn_home_path&amp;gt;/kcnd/data genesis.json 2) For PN, $ cd &amp;lt;your_klaytn_home_path&amp;gt;/kpnd/data $ kcn --networkid 8217 init --datadir &amp;lt;your_klaytn_home_path&amp;gt;/kpnd/data genesis.json If you finish this step, please click the next button &amp;gt; on the right side of this page.</description>
+    </item>
+    
+    <item>
+      <title>Telegraf Configuration</title>
+      <link>/klaytn-cypress-setup-workshop/40_configure_network/50_telegraf_configuration.html</link>
+      <pubDate>Thu, 14 Jul 2022 16:44:50 +0900</pubDate>
+      
+      <guid>/klaytn-cypress-setup-workshop/40_configure_network/50_telegraf_configuration.html</guid>
+      <description>1. To monitor your nodes in Cypress Dashboard, please change the influxdb configuration as below: 1) For both CN and PN, $ grep -A2 &amp;#34;influxdb&amp;#34; /etc/telegraf/telegraf.d/klaytn.conf [[outputs.influxdb]] urls = [ &amp;#34;http://13.209.53.161:45560&amp;#34; ] database = &amp;#34;klaytn_cypress&amp;#34; If you finish this step, please click the next button &amp;gt; on the right side of this page.</description>
+    </item>
+    
+    <item>
+      <title>Datadog Configuration</title>
+      <link>/klaytn-cypress-setup-workshop/40_configure_network/60_datadog_configuration.html</link>
+      <pubDate>Wed, 20 Jul 2022 15:33:50 +0900</pubDate>
+      
+      <guid>/klaytn-cypress-setup-workshop/40_configure_network/60_datadog_configuration.html</guid>
+      <description>2. For additional monitoring, we are planning to use Datadog as well. Please follow this step for Datadog installation. 1) For CN, $ DD_API_KEY=&amp;#34;DATADOG API KEY&amp;#34; HOST_NAME=&amp;#34;CN HOSTNAME&amp;#34; NODE_TYPE=cn INSTANCE=cn LOG_DIR=&amp;#34;&amp;lt;your_klaytn_home_path&amp;gt;/kcnd/log/kcnd.out&amp;#34; bash -c &amp;#34;$(curl -L https://raw.githubusercontent.com/klaytn/datadog-agent-install./main/install-datadog-agent.sh)&amp;#34; ** DD_API_KEY will be shared with you by Slack DM.
+** Please use lowercase, then append &amp;lsquo;cn&amp;rsquo; for HOST_NAME
+** For example, LOG_DIR = /data/kcnd/log/kcnd.out, HOST_NAME=netmarble-cn
+2) For PN, $ DD_API_KEY=&amp;#34;DATADOG API KEY&amp;#34; HOST_NAME=&amp;#34;PN HOSTNAME&amp;#34; NODE_TYPE=pn INSTANCE=pn1 bash -c &amp;#34;$(curl -L https://raw.</description>
+    </item>
+    
+  </channel>
+</rss>
