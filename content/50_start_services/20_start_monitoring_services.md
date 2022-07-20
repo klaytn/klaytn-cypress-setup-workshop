@@ -1,5 +1,5 @@
 ---
-title: "Start the Telegraf service"
+title: "Start the monitoring services"
 date: 2022-07-11T18:39:03+09:00
 weight: 20
 pre: "<b>B. </b>"

@@ -7,26 +7,16 @@ draft: false
 ---
 
 {{< line_break >}}
-#### 2. Check if the static-nodes.json has correct information for your PN.
-_** Unlike CN, PN uses a static-nodes.json file to find out where to connect and PNN consists of PNs within the Cypress network topology._
-_https://docs.klaytn.foundation/klaytn#tiered-networks_
-> Typically, PNs maintain just one connection with a PN in a neighboring Core Cell. The number of peer connections is subject to change depending on the network configuration.
+#### 2. Modify the static-nodes.json in your PN1 and PN2.
+
+> PNN(Proxy Node Network) consists of PNs within the Cypress network topology.
+> > Typically, PNs maintain just one connection with a PN in a neighboring Core Cell. The number of peer connections is subject to change depending on the network configuration.
+
+##### Since the information in static-nodes.json is different for each PN, we will inform each CCO individually.    
+_** Please refer below diagram and the docs. - https://docs.klaytn.foundation/klaytn#tiered-networks_   
+_** Unlike CN, PN uses a static-nodes.json file to find out where to connect._   
+
 ![Klaytn_Network_Topology](/images/klaytn_network_topology.png)
-
-
-##### 1) For Thrust ,
-PN1
-{{< highlight html >}}
-[
-  "CN_KNI_ADDRESS@CN_INTERNAL_IP:PORT?discport=0&ntype=cn"
-]
-{{< /highlight >}}
-PN2
-{{< highlight html >}}
-[
-"CN_KNI_ADDRESS@CN_INTERNAL_IP:PORT?discport=0&ntype=cn"
-]
-{{< /highlight >}}
 
 
 {{< line_break >}}
