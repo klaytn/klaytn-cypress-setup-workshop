@@ -16,7 +16,7 @@ $ egrep "^NETWORK|NO_DISCOVER|BOOTNODES" /etc/kcnd/conf/kcnd.conf
 NETWORK="cypress"
 NETWORK_ID=
 NO_DISCOVER=0 # setting 1 to disable discovery
-BOOTNODES="kni://8e1881cdca97f52a76c6d2683db030f51a34ffc039476b4ed5bc5c757de1b5ce48fea1e53aa182a6ac2b076460881d50d3b57461d1cf36fae777e992893ad485@52.199.8.244:32323?discport=32323&ntype=bn"
+BOOTNODES="kni://b286e4140aea469992146c299f8915e34d59a014c29a045de41e578014761114176f42dece34a54ce1e37f92ab981fe1bb14e54fe23576e1182778c40e6272a2@ston146.cypress.klaytn.net:32323?ntype=bn,kni://a6b61ee786952e3f8b681867d2535485622e80d0b9b7b89f26b2c631e59a4246b5f879487fbde7c324c3308ece0cdb1d7738430bdffce4f7f8c4f5a09eef80a3@ston738.cypress.klaytn.net:32323?ntype=bn,kni://b25838727eb6b4631c8f8910b4f6376fe28041f251ee21129078a61d18d62d0dc2601be5a97eab8bdb5772309f861fddb7192935483813ef20e5716a34266f16@ston903.cypress.klaytn.net:32323?ntype=bn"
 {{< /highlight >}}
 
 ##### 2) For PN, your configuration should be modified as shown below.
@@ -24,8 +24,8 @@ BOOTNODES="kni://8e1881cdca97f52a76c6d2683db030f51a34ffc039476b4ed5bc5c757de1b5c
 $ egrep "^NETWORK|NO_DISCOVER|BOOTNODES" /etc/kpnd/conf/kpnd.conf
 NETWORK="cypress"
 NETWORK_ID=
-NO_DISCOVER=0 # setting 1 to disable discovery
-BOOTNODES="kni://b286e4140aea469992146c299f8915e34d59a014c29a045de41e578014761114176f42dece34a54ce1e37f92ab981fe1bb14e54fe23576e1182778c40e6272a2@ston146.cypress.klaytn.net:32323?ntype=bn,kni://a6b61ee786952e3f8b681867d2535485622e80d0b9b7b89f26b2c631e59a4246b5f879487fbde7c324c3308ece0cdb1d7738430bdffce4f7f8c4f5a09eef80a3@ston738.cypress.klaytn.net:32323?ntype=bn,kni://b25838727eb6b4631c8f8910b4f6376fe28041f251ee21129078a61d18d62d0dc2601be5a97eab8bdb5772309f861fddb7192935483813ef20e5716a34266f16@ston903.cypress.klaytn.net:32323?ntype=bn"
+NO_DISCOVER=1 # setting 1 to disable discovery
+BOOTNODES=
 {{< /highlight >}}
 {{< line_break >}}
 
