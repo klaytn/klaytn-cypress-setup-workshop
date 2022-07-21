@@ -152,7 +152,7 @@ https://docs.klaytn.foundation/node/core-cell/installation-guide/testing-the-cor
       <pubDate>Mon, 11 Jul 2022 17:23:03 +0900</pubDate>
       
       <guid>/klaytn-cypress-setup-workshop/40_configure_network/40_node_initialization.html</guid>
-      <description>1. Now, we will initialize each node using the Cypress genesis file. 1) For CN, $ cd &amp;lt;your_klaytn_home_path&amp;gt;/kcnd/data $ kcn --networkid 8217 init --datadir &amp;lt;your_klaytn_home_path&amp;gt;/kcnd/data genesis.json 2) For PN, $ cd &amp;lt;your_klaytn_home_path&amp;gt;/kpnd/data $ kcn --networkid 8217 init --datadir &amp;lt;your_klaytn_home_path&amp;gt;/kpnd/data genesis.json If you finish this step, please click the next button &amp;gt; on the right side of this page.</description>
+      <description>1. Now, we will initialize each node using the Cypress genesis file. 1) For CN, $ cd &amp;lt;your_klaytn_home_path&amp;gt;/kcnd/data $ kcn --networkid 8217 init --datadir &amp;lt;your_klaytn_home_path&amp;gt;/kcnd/data genesis.json 2) For PN, $ cd &amp;lt;your_klaytn_home_path&amp;gt;/kpnd/data $ kpn --networkid 8217 init --datadir &amp;lt;your_klaytn_home_path&amp;gt;/kpnd/data genesis.json If you finish this step, please click the next button &amp;gt; on the right side of this page.</description>
     </item>
     
     <item>

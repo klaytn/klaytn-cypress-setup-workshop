@@ -95,7 +95,7 @@
 	"title": "PN static-nodes.json",
 	"tags": [],
 	"description": "",
-	"content": "\n2. Modify the static-nodes.json in your PN1 and PN2. Since the information in the static-nodes.json is different for each PN, we will inform each CCO individually by Slack DM. ** Please refer the diagram below and the docs to understand PNN(Proxy Node Network). https://docs.klaytn.foundation/klaytn#tiered-networks\nPNN(Proxy Node Network) consists of PNs within the Cypress network topology.\nTypically, PNs maintain just one connection with a PN in a neighboring Core Cell. The number of peer connections is subject to change depending on the network configuration.\n** Please note that unlike CN, PN uses a static-nodes.json file to find out where to connect.\nIf you finish this step, please click the next button \u0026gt; on the right side of this page.\n"
+	"content": "\n2. Modify the static-nodes.json in your PN1 and PN2. Since the information in the static-nodes.json is different for each PN, we will inform each CCO individually by Slack DM. ** Please refer the diagram below and the docs to understand PNN(Proxy Node Network). https://docs.klaytn.foundation/klaytn#tiered-networks\nPNN(Proxy Node Network) consists of PNs within the Cypress network topology.\nTypically, PNs maintain just one connection with a PN in a neighboring Core Cell. The number of peer connections is subject to change depending on the network configuration.\n** Please note that PN uses a static-nodes.json file to find out where to connect.\nIf you finish this step, please click the next button \u0026gt; on the right side of this page.\n"
 },
 {
 	"uri": "/klaytn-cypress-setup-workshop/20_network_reset/30_remove_data_and_log.html",
@@ -123,7 +123,7 @@
 	"title": "Node Initialization",
 	"tags": [],
 	"description": "",
-	"content": "\n1. Now, we will initialize each node using the Cypress genesis file. 1) For CN, $ cd \u0026lt;your_klaytn_home_path\u0026gt;/kcnd/data $ kcn --networkid 8217 init --datadir \u0026lt;your_klaytn_home_path\u0026gt;/kcnd/data genesis.json 2) For PN, $ cd \u0026lt;your_klaytn_home_path\u0026gt;/kpnd/data $ kcn --networkid 8217 init --datadir \u0026lt;your_klaytn_home_path\u0026gt;/kpnd/data genesis.json If you finish this step, please click the next button \u0026gt; on the right side of this page.\n"
+	"content": "\n1. Now, we will initialize each node using the Cypress genesis file. 1) For CN, $ cd \u0026lt;your_klaytn_home_path\u0026gt;/kcnd/data $ kcn --networkid 8217 init --datadir \u0026lt;your_klaytn_home_path\u0026gt;/kcnd/data genesis.json 2) For PN, $ cd \u0026lt;your_klaytn_home_path\u0026gt;/kpnd/data $ kpn --networkid 8217 init --datadir \u0026lt;your_klaytn_home_path\u0026gt;/kpnd/data genesis.json If you finish this step, please click the next button \u0026gt; on the right side of this page.\n"
 },
 {
 	"uri": "/klaytn-cypress-setup-workshop/40_configure_network.html",
