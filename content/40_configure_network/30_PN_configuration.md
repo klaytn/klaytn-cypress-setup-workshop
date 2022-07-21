@@ -16,7 +16,7 @@ https://docs.klaytn.foundation/klaytn#tiered-networks
 > PNN(Proxy Node Network) consists of PNs within the Cypress network topology.   
 > Typically, PNs maintain just one connection with a PN in a neighboring Core Cell. The number of peer connections is subject to change depending on the network configuration.
 
-_** Please note that unlike CN, PN uses a static-nodes.json file to find out where to connect._   
+_** Please note that PN uses a static-nodes.json file to find out where to connect._   
 
 ![Klaytn_Network_Topology](/images/PNN_topology.png)
 

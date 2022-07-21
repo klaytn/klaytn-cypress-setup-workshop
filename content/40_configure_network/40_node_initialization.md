@@ -18,7 +18,7 @@ $ kcn --networkid 8217 init --datadir <your_klaytn_home_path>/kcnd/data genesis.
 ##### 2) For PN,
 {{< highlight html >}}
 $ cd <your_klaytn_home_path>/kpnd/data
-$ kcn --networkid 8217 init --datadir <your_klaytn_home_path>/kpnd/data genesis.json
+$ kpn --networkid 8217 init --datadir <your_klaytn_home_path>/kpnd/data genesis.json
 {{< /highlight >}}
 {{< line_break >}}
 
