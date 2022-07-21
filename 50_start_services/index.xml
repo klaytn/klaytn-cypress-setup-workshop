@@ -42,7 +42,16 @@
       
       <guid>/klaytn-cypress-setup-workshop/50_start_services/40_check_monitoring_dashboard.html</guid>
       <description>4. Take a look at Grafana dashboard to confirm if your nodes are correctly joined to Cypress network. Link : Cypress Grafana ** You can refer this document to check your services further.
-https://docs.klaytn.foundation/node/core-cell/installation-guide/testing-the-core-cell#kcn-console-kpn-console If your nodes are shown and CN/PN Inter Connections looks 2 in this dashboard, everything is configured normally. Please send a message to Klaytn DevOps by Slack channel #cco_7th_batch. If you finish this step, please click the next button &amp;gt; on the right side of this page.</description>
+https://docs.klaytn.foundation/node/core-cell/installation-guide/testing-the-core-cell#kcn-console-kpn-console If your CN/PN Inter Connections looks 2 and blockNumber increases correctly in this dashboard, everything is configured normally. If you complete all the previous steps, please send a message to Klaytn DevOps by Slack channel #cco_7th_batch.</description>
+    </item>
+    
+    <item>
+      <title>Remove Chaindata</title>
+      <link>/klaytn-cypress-setup-workshop/50_start_services/50_remove_chaindata.html</link>
+      <pubDate>Thu, 14 Jul 2022 19:26:47 +0900</pubDate>
+      
+      <guid>/klaytn-cypress-setup-workshop/50_start_services/50_remove_chaindata.html</guid>
+      <description>1. Now, the donwloaded chaindata for Cypress can be removed, if you can confirm everything is done without any problem. 1) For both CN and PN, $ rm klaytn-cypress-chaindata-20220719010712.tar.gz If you finish this step, please click the next button &amp;gt; on the right side of this page.</description>
     </item>
     
   </channel>

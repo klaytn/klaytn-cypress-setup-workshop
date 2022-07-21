@@ -38,9 +38,6 @@
     <loc>/klaytn-cypress-setup-workshop/20_network_reset.html</loc>
     <lastmod>2022-07-11T10:24:36+09:00</lastmod>
   </url><url>
-    <loc>/klaytn-cypress-setup-workshop/30_download_chaindata/30_remove_chaindata.html</loc>
-    <lastmod>2022-07-14T19:26:47+09:00</lastmod>
-  </url><url>
     <loc>/klaytn-cypress-setup-workshop/50_start_services/30_check_the_services.html</loc>
     <lastmod>2022-07-11T18:42:35+09:00</lastmod>
   </url><url>
@@ -61,6 +58,9 @@
   </url><url>
     <loc>/klaytn-cypress-setup-workshop/40_configure_network.html</loc>
     <lastmod>2022-07-11T10:25:55+09:00</lastmod>
+  </url><url>
+    <loc>/klaytn-cypress-setup-workshop/50_start_services/50_remove_chaindata.html</loc>
+    <lastmod>2022-07-14T19:26:47+09:00</lastmod>
   </url><url>
     <loc>/klaytn-cypress-setup-workshop/40_configure_network/50_telegraf_configuration.html</loc>
     <lastmod>2022-07-14T16:44:50+09:00</lastmod>

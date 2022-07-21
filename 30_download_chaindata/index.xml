@@ -27,14 +27,5 @@
 2) For PN, $ tar -C &amp;lt;your_klaytn_home_path&amp;gt;/kpnd/data -xvf klaytn-cypress-chaindata-20220719010712.tar.gz If you finish this step, please click the next button &amp;gt; on the right side of this page.</description>
     </item>
     
-    <item>
-      <title>Remove Chaindata</title>
-      <link>/klaytn-cypress-setup-workshop/30_download_chaindata/30_remove_chaindata.html</link>
-      <pubDate>Thu, 14 Jul 2022 19:26:47 +0900</pubDate>
-      
-      <guid>/klaytn-cypress-setup-workshop/30_download_chaindata/30_remove_chaindata.html</guid>
-      <description>3. You can remove the chaindata downloaded, if the previous step is completed. 1) For both CN and PN, $ rm klaytn-cypress-chaindata-20220719010712.tar.gz If you finish this step, please click the next button &amp;gt; on the right side of this page.</description>
-    </item>
-    
   </channel>
 </rss>

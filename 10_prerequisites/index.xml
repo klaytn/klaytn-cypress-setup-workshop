@@ -13,11 +13,11 @@
       <pubDate>Mon, 11 Jul 2022 19:18:45 +0900</pubDate>
       
       <guid>/klaytn-cypress-setup-workshop/10_prerequisites/10_firewall_configuration.html</guid>
-      <description>1. (Only for CN) Firewall configuration 1) If Baobab validation is completed, remove below Klaytn CN&amp;rsquo;s IP address of Baobab from your firewall ingress rule. 54.180.180.202
+      <description>1. (Only for CN) Firewall configuration 1) If Baobab validation is completed, remove below Klaytn CN&amp;rsquo;s IP addresses of Baobab from your firewall configuration. 54.180.180.202
 54.180.18.176
 52.79.134.72
 52.78.232.39
-2) For communication and multichannel between Cypress CN, allow TCP 32323-32324 with below IP addresses to your firewall ingress rule. 52.187.181.245 13.250.156.19 18.181.103.22 13.251.72.113 15.164.153.242 52.78.129.138 183.110.37.118 3.114.52.253 13.115.105.184 3.112.138.154 13.124.195.223 52.68.240.46 54.254.44.48 3.37.228.174 3.1.128.148 52.221.66.32 13.250.248.137 52.194.171.123 18.136.27.69 121.53.201.23 223.</description>
+2) For communication and multichannel across CCO CNs in the Cypress network, TCP 32323-32324 and UDP 32323 from existing CCO&amp;rsquo;s CNs should be allowed in your CN firewall configuration. ** The existing CCO&amp;rsquo;s CNs IP addresses will be provided by Slack DM.</description>
     </item>
     
     <item>
