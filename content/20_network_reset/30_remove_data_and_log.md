@@ -7,11 +7,12 @@ draft: false
 ---
 
 {{< line_break >}}
-#### 3. Remove existing chaindata and log for pre-cypress.
+#### 3. Remove existing chaindata and log for the Baobab network.
 
 ##### 0) During pre-cypress, you did set <klaytn_home_path> for Ansible deployment. But you can check this out if you can't remember where your data directory is located.
 {{< highlight html >}}
-$ grep "DATA_DIR" /etc/kpnd/conf/kpnd.conf
+(CN) $ grep "DATA_DIR" /etc/kcnd/conf/kcnd.conf
+(PN) $ grep "DATA_DIR" /etc/kpnd/conf/kpnd.conf
 {{< /highlight >}}
 
 ##### 1) For CN,

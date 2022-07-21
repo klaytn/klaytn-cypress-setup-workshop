@@ -15,7 +15,7 @@ $ DD_API_KEY="DATADOG API KEY" HOST_NAME="CN HOSTNAME" NODE_TYPE=cn INSTANCE=cn 
 {{< /highlight >}}
 _** DD_API_KEY will be shared with you by Slack DM._   
 _** Please use lowercase, then append 'cn' for HOST_NAME_   
-_** For example, ```LOG_DIR = /data/kcnd/log/kcnd.out, HOST_NAME=netmarble-cn```_   
+_** For example, ```LOG_DIR = /data/kcnd/log/kcnd.out, HOST_NAME=cco-cn```_   
 
 ##### 2) For PN,
 {{< highlight html >}}
@@ -23,7 +23,7 @@ $ DD_API_KEY="DATADOG API KEY" HOST_NAME="PN HOSTNAME" NODE_TYPE=pn INSTANCE=pn1
 {{< /highlight >}}
 _** DD_API_KEY will be shared with you by Slack DM._   
 _** Please use lowercase, then append 'pn1' or 'pn2' for HOST_NAME_   
-_** For example, ```LOG_DIR = /data/kcnd/log/kcnd.out, HOST_NAME=netmarble-pn1```_   
+_** For example, ```HOST_NAME=cco-pn1 or cco-pn2```_   
 
 #### 3. To allow your nodes to communicate Datadog, please add these IP addresses to the firewall of each node.
 ##### Port number 443 ```3.233.144.0/20```

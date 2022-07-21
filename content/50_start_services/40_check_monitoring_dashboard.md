@@ -16,8 +16,8 @@ _** You can refer this document to check your services further._
 _https://docs.klaytn.foundation/node/core-cell/installation-guide/testing-the-core-cell#kcn-console-kpn-console_
 {{< line_break >}}
 
-#### If your nodes are shown and CN/PN Inter Connections looks 2 in this dashboard, everything is configured normally.  
-#### Please send a message to Klaytn DevOps by Slack channel #cco_7th_batch.
+1. If your CN/PN Inter Connections looks 2 and blockNumber increases correctly in this dashboard, everything is configured normally.  
+2. If you complete all the previous steps, please send a message to Klaytn DevOps by Slack channel #cco_7th_batch.
 {{< line_break >}}
 
 
