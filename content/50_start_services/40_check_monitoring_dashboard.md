@@ -17,7 +17,7 @@ _https://docs.klaytn.foundation/node/core-cell/installation-guide/testing-the-co
 {{< line_break >}}
 
 1. If your CN/PN Inter Connections looks 2 and blockNumber increases correctly in this dashboard, everything is configured normally.  
-2. If you complete all the previous steps, please send a message to Klaytn DevOps by Slack channel #cco_7th_batch.
+2. If you complete all the previous steps, please send a message to Klaytn DevOps by Slack.
 {{< line_break >}}
 
 
