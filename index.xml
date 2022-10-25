@@ -143,7 +143,7 @@ Typically, PNs maintain just one connection with a PN in a neighboring Core Cell
       
       <guid>/klaytn-cypress-setup-workshop/50_start_services/40_check_monitoring_dashboard.html</guid>
       <description>4. Take a look at Grafana dashboard to confirm if your nodes are correctly joined to Cypress network. Link : Cypress Grafana ** You can refer this document to check your services further.
-https://docs.klaytn.foundation/node/core-cell/installation-guide/testing-the-core-cell#kcn-console-kpn-console If your CN/PN Inter Connections looks 2 and blockNumber increases correctly in this dashboard, everything is configured normally. If you complete all the previous steps, please send a message to Klaytn DevOps by Slack channel #cco_7th_batch.</description>
+https://docs.klaytn.foundation/node/core-cell/installation-guide/testing-the-core-cell#kcn-console-kpn-console If your CN/PN Inter Connections looks 2 and blockNumber increases correctly in this dashboard, everything is configured normally. If you complete all the previous steps, please send a message to Klaytn DevOps by Slack. If you finish this step, please click the next button &amp;gt; on the right side of this page.</description>
     </item>
     
     <item>
