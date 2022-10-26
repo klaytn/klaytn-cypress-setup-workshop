@@ -64,8 +64,8 @@ $ cat /etc/telegraf/telegraf.conf | grep -v &amp;#39;^\s*$\|^\s*\#&amp;#39; | gr
       
       <guid>/klaytn-cypress-setup-workshop/40_configure_network/60_datadog_configuration.html</guid>
       <description>2. For additional monitoring, we are planning to use Datadog as well. Please follow this step for Datadog installation. 1) For CN, $ DD_API_KEY=&amp;#34;DATADOG API KEY&amp;#34; HOST_NAME=&amp;#34;CN HOSTNAME&amp;#34; NODE_TYPE=cn INSTANCE=cn LOG_DIR=&amp;#34;&amp;lt;your_klaytn_home_path&amp;gt;/kcnd/log/kcnd.out&amp;#34; bash -c &amp;#34;$(curl -L https://raw.githubusercontent.com/klaytn/datadog-agent-install./main/install-datadog-agent.sh)&amp;#34; ** DD_API_KEY will be shared with you by Slack DM.
-** Please use lowercase, then append &amp;lsquo;cn&amp;rsquo; for HOST_NAME
-** For example, LOG_DIR = /data/kcnd/log/kcnd.out, HOST_NAME=cco-cn
+** Please use lowercase, then append &amp;lsquo;cn-01&amp;rsquo; for HOST_NAME
+** For example, LOG_DIR = /data/kcnd/log/kcnd.out or /data/kcnd/logs/kcnd.out, HOST_NAME=cco_name-cn-01
 2) For PN, $ DD_API_KEY=&amp;#34;DATADOG API KEY&amp;#34; HOST_NAME=&amp;#34;PN HOSTNAME&amp;#34; NODE_TYPE=pn INSTANCE=pn1 bash -c &amp;#34;$(curl -L https://raw.</description>
     </item>
     
