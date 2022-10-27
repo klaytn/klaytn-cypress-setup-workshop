@@ -11,19 +11,41 @@ draft: false
 
 ##### 1) For CN, 
 {{< highlight html >}}
-$ DD_API_KEY="DATADOG API KEY" HOST_NAME="CN HOSTNAME" NODE_TYPE=cn INSTANCE=cn LOG_DIR="<your_klaytn_home_path>/kcnd/log" bash -c "$(curl -L https://raw.githubusercontent.com/klaytn/datadog-agent-install./main/install-datadog-agent.sh)"
+$ cat <<EOF>> dd_vars
+DD_API_KEY="DATADOG API KEY"
+NETWORK="cypress"
+NODE_NAME="<cco_name>-cn-01" 
+NODE_TYPE=cn 
+INSTANCE=cn 
+LOG_DIR="<your_klaytn_home_path>/kcnd/log"
+EOF
+
+$ source dd_vars
+
+$ bash -c "$(curl -L https://raw.githubusercontent.com/klaytn/datadog-agent-install./main/install-datadog-agent.sh)"
 {{< /highlight >}}
 _** DD_API_KEY will be shared with you by Slack DM._   
-_** Please use lowercase, then append 'cn-01' for HOST_NAME_   
-_** For example, ```LOG_DIR = /data/kcnd/log or /data/kcnd/logs, HOST_NAME=cco_name-cn-01```_   
+_** Please use lowercase for NODE_NAME._   
+_** For example, ```LOG_DIR = /data/kcnd/log or /data/kcnd/logs, NODE_NAME=cco_name-cn-01```_   
 
 ##### 2) For PN,
 {{< highlight html >}}
-$ DD_API_KEY="DATADOG API KEY" HOST_NAME="PN HOSTNAME" NODE_TYPE=pn INSTANCE=pn1 bash -c "$(curl -L https://raw.githubusercontent.com/klaytn/datadog-agent-install./main/install-datadog-agent.sh)"
+$ cat <<EOF>> dd_vars
+DD_API_KEY="DATADOG API KEY"
+NETWORK="cypress"
+NODE_NAME="<cco_name>-pn-01" or "<cco_name>-pn-02"
+NODE_TYPE="pn"
+INSTANCE="pn1"
+LOG_DIR="<your_klaytn_home_path>/kpnd/log"
+EOF
+
+$ source dd_vars
+
+$ bash -c "$(curl -L https://raw.githubusercontent.com/klaytn/datadog-agent-install./main/install-datadog-agent.sh)"
 {{< /highlight >}}
 _** DD_API_KEY will be shared with you by Slack DM._   
-_** Please use lowercase, then append 'pn-01' or 'pn-02' for HOST_NAME_   
-_** For example, ```HOST_NAME=cco_name-pn-01 or cco_name-pn-02```_   
+_** Please use lowercase for NODE_NAME._   
+_** For example, ```NODE_NAME=cco_name-pn-01 or cco_name-pn-02```_   
 
 #### 3. To allow your nodes to communicate Datadog, please add these IP addresses to the firewall of each node.
 ##### Port number 443 ```3.233.144.0/20```
