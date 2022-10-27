@@ -11,11 +11,11 @@ draft: false
 
 ##### 1) For CN, 
 {{< highlight html >}}
-$ DD_API_KEY="DATADOG API KEY" HOST_NAME="CN HOSTNAME" NODE_TYPE=cn INSTANCE=cn LOG_DIR="<your_klaytn_home_path>/kcnd/log/kcnd.out" bash -c "$(curl -L https://raw.githubusercontent.com/klaytn/datadog-agent-install./main/install-datadog-agent.sh)"
+$ DD_API_KEY="DATADOG API KEY" HOST_NAME="CN HOSTNAME" NODE_TYPE=cn INSTANCE=cn LOG_DIR="<your_klaytn_home_path>/kcnd/log" bash -c "$(curl -L https://raw.githubusercontent.com/klaytn/datadog-agent-install./main/install-datadog-agent.sh)"
 {{< /highlight >}}
 _** DD_API_KEY will be shared with you by Slack DM._   
 _** Please use lowercase, then append 'cn-01' for HOST_NAME_   
-_** For example, ```LOG_DIR = /data/kcnd/log/kcnd.out or /data/kcnd/logs/kcnd.out, HOST_NAME=cco_name-cn-01```_   
+_** For example, ```LOG_DIR = /data/kcnd/log or /data/kcnd/logs, HOST_NAME=cco_name-cn-01```_   
 
 ##### 2) For PN,
 {{< highlight html >}}
