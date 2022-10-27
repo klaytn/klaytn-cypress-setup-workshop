@@ -12,12 +12,12 @@ draft: false
 ##### 1) For CN, 
 {{< highlight html >}}
 $ cat <<EOF>> dd_vars
-DD_API_KEY="DATADOG API KEY"
-NETWORK="cypress"
-NODE_NAME="<cco_name>-cn-01" 
-NODE_TYPE=cn 
-INSTANCE=cn 
-LOG_DIR="<your_klaytn_home_path>/kcnd/log"
+export DD_API_KEY="DATADOG API KEY"
+export NETWORK="cypress"
+export NODE_NAME="<cco_name>-cn-01" 
+export NODE_TYPE=cn 
+export INSTANCE=cn 
+export LOG_DIR="<your_klaytn_home_path>/kcnd/log"
 EOF
 
 $ source dd_vars
@@ -31,11 +31,11 @@ _** For example, ```LOG_DIR = /data/kcnd/log or /data/kcnd/logs, NODE_NAME=cco_n
 ##### 2) For PN,
 {{< highlight html >}}
 $ cat <<EOF>> dd_vars
-DD_API_KEY="DATADOG API KEY"
-NETWORK="cypress"
-NODE_NAME="<cco_name>-pn-01" or "<cco_name>-pn-02"
-NODE_TYPE="pn"
-INSTANCE="pn1"
+export DD_API_KEY="DATADOG API KEY"
+export NETWORK="cypress"
+export NODE_NAME="<cco_name>-pn-01" or "<cco_name>-pn-02"
+export NODE_TYPE="pn"
+export INSTANCE="pn1" or "pn2"
 LOG_DIR="<your_klaytn_home_path>/kpnd/log"
 EOF
 
@@ -45,7 +45,7 @@ $ bash -c "$(curl -L https://raw.githubusercontent.com/klaytn/datadog-agent-inst
 {{< /highlight >}}
 _** DD_API_KEY will be shared with you by Slack DM._   
 _** Please use lowercase for NODE_NAME._   
-_** For example, ```NODE_NAME=cco_name-pn-01 or cco_name-pn-02```_   
+_** For example, ```LOG_DIR = /data/kpnd/log or /data/kpnd/logs, NODE_NAME=cco_name-pn-01 or cco_name-pn-02```_   
 
 #### 3. To allow your nodes to communicate Datadog, please add these IP addresses to the firewall of each node.
 ##### Port number 443 ```3.233.144.0/20```
