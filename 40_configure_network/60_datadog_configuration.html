@@ -12,22 +12,22 @@
     <title>Datadog Configuration - Klaytn CCO Onboarding - Cypress</title>
 
     
-    <link href="/klaytn-cypress-setup-workshop/css/nucleus.css?1666830581" rel="stylesheet">
-    <link href="/klaytn-cypress-setup-workshop/css/fontawesome-all.min.css?1666830581" rel="stylesheet">
-    <link href="/klaytn-cypress-setup-workshop/css/hybrid.css?1666830581" rel="stylesheet">
-    <link href="/klaytn-cypress-setup-workshop/css/featherlight.min.css?1666830581" rel="stylesheet">
-    <link href="/klaytn-cypress-setup-workshop/css/perfect-scrollbar.min.css?1666830581" rel="stylesheet">
-    <link href="/klaytn-cypress-setup-workshop/css/auto-complete.css?1666830581" rel="stylesheet">
-    <link href="/klaytn-cypress-setup-workshop/css/atom-one-dark-reasonable.css?1666830581" rel="stylesheet">
-    <link href="/klaytn-cypress-setup-workshop/css/theme.css?1666830581" rel="stylesheet">
-    <link href="/klaytn-cypress-setup-workshop/css/tabs.css?1666830581" rel="stylesheet">
-    <link href="/klaytn-cypress-setup-workshop/css/hugo-theme.css?1666830581" rel="stylesheet">
+    <link href="/klaytn-cypress-setup-workshop/css/nucleus.css?1666838990" rel="stylesheet">
+    <link href="/klaytn-cypress-setup-workshop/css/fontawesome-all.min.css?1666838990" rel="stylesheet">
+    <link href="/klaytn-cypress-setup-workshop/css/hybrid.css?1666838990" rel="stylesheet">
+    <link href="/klaytn-cypress-setup-workshop/css/featherlight.min.css?1666838990" rel="stylesheet">
+    <link href="/klaytn-cypress-setup-workshop/css/perfect-scrollbar.min.css?1666838990" rel="stylesheet">
+    <link href="/klaytn-cypress-setup-workshop/css/auto-complete.css?1666838990" rel="stylesheet">
+    <link href="/klaytn-cypress-setup-workshop/css/atom-one-dark-reasonable.css?1666838990" rel="stylesheet">
+    <link href="/klaytn-cypress-setup-workshop/css/theme.css?1666838990" rel="stylesheet">
+    <link href="/klaytn-cypress-setup-workshop/css/tabs.css?1666838990" rel="stylesheet">
+    <link href="/klaytn-cypress-setup-workshop/css/hugo-theme.css?1666838990" rel="stylesheet">
     
-    <link href="/klaytn-cypress-setup-workshop/css/theme-klaytn.css?1666830581" rel="stylesheet">
+    <link href="/klaytn-cypress-setup-workshop/css/theme-klaytn.css?1666838990" rel="stylesheet">
     
-    <link href="/klaytn-cypress-setup-workshop/css/foo.css?1666830581" rel="stylesheet"><link href="/klaytn-cypress-setup-workshop/css/bar.css?1666830581" rel="stylesheet">
+    <link href="/klaytn-cypress-setup-workshop/css/foo.css?1666838990" rel="stylesheet"><link href="/klaytn-cypress-setup-workshop/css/bar.css?1666838990" rel="stylesheet">
 
-    <script src="/klaytn-cypress-setup-workshop/js/jquery-3.3.1.min.js?1666830581"></script>
+    <script src="/klaytn-cypress-setup-workshop/js/jquery-3.3.1.min.js?1666838990"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -54,14 +54,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/klaytn-cypress-setup-workshop/js/lunr.min.js?1666830581"></script>
-<script type="text/javascript" src="/klaytn-cypress-setup-workshop/js/auto-complete.js?1666830581"></script>
+<script type="text/javascript" src="/klaytn-cypress-setup-workshop/js/lunr.min.js?1666838990"></script>
+<script type="text/javascript" src="/klaytn-cypress-setup-workshop/js/auto-complete.js?1666838990"></script>
 <script type="text/javascript">
     
         var baseurl = "\/klaytn-cypress-setup-workshop";
     
 </script>
-<script type="text/javascript" src="/klaytn-cypress-setup-workshop/js/search.js?1666830581"></script>
+<script type="text/javascript" src="/klaytn-cypress-setup-workshop/js/search.js?1666838990"></script>
 
     
   </div>
@@ -764,15 +764,37 @@
 
 <h4 id="2-for-additional-monitoring-we-are-planning-to-use-datadog-as-well-please-follow-this-step-for-datadog-installation">2. For additional monitoring, we are planning to use Datadog as well. Please follow this step for Datadog installation.</h4>
 <h5 id="1-for-cn">1) For CN,</h5>
-<p><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>$ DD_API_KEY=&#34;DATADOG API KEY&#34; HOST_NAME=&#34;CN HOSTNAME&#34; NODE_TYPE=cn INSTANCE=cn LOG_DIR=&#34;&lt;<span style="color:#f92672">your_klaytn_home_path</span>&gt;/kcnd/log&#34; bash -c &#34;$(curl -L https://raw.githubusercontent.com/klaytn/datadog-agent-install./main/install-datadog-agent.sh)&#34;</span></span></code></pre></div>
+<p><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>$ cat <span style="color:#960050;background-color:#1e0010">&lt;</span>&lt;<span style="color:#f92672">EOF</span>&gt;&gt; dd_vars
+</span></span><span style="display:flex;"><span>export DD_API_KEY=&#34;DATADOG API KEY&#34;
+</span></span><span style="display:flex;"><span>export NETWORK=&#34;cypress&#34;
+</span></span><span style="display:flex;"><span>export NODE_NAME=&#34;&lt;<span style="color:#f92672">cco_name</span>&gt;-cn-01&#34; 
+</span></span><span style="display:flex;"><span>export NODE_TYPE=cn 
+</span></span><span style="display:flex;"><span>export INSTANCE=cn 
+</span></span><span style="display:flex;"><span>export LOG_DIR=&#34;&lt;<span style="color:#f92672">your_klaytn_home_path</span>&gt;/kcnd/log&#34;
+</span></span><span style="display:flex;"><span>EOF
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>$ source dd_vars
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>$ bash -c &#34;$(curl -L https://raw.githubusercontent.com/klaytn/datadog-agent-install./main/install-datadog-agent.sh)&#34;</span></span></code></pre></div>
 <em>** DD_API_KEY will be shared with you by Slack DM.</em><br>
-<em>** Please use lowercase, then append &lsquo;cn-01&rsquo; for HOST_NAME</em><br>
-<em>** For example, <code>LOG_DIR = /data/kcnd/log or /data/kcnd/logs, HOST_NAME=cco_name-cn-01</code></em></p>
+<em>** Please use lowercase for NODE_NAME.</em><br>
+<em>** For example, <code>LOG_DIR = /data/kcnd/log or /data/kcnd/logs, NODE_NAME=cco_name-cn-01</code></em></p>
 <h5 id="2-for-pn">2) For PN,</h5>
-<p><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>$ DD_API_KEY=&#34;DATADOG API KEY&#34; HOST_NAME=&#34;PN HOSTNAME&#34; NODE_TYPE=pn INSTANCE=pn1 bash -c &#34;$(curl -L https://raw.githubusercontent.com/klaytn/datadog-agent-install./main/install-datadog-agent.sh)&#34;</span></span></code></pre></div>
+<p><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>$ cat <span style="color:#960050;background-color:#1e0010">&lt;</span>&lt;<span style="color:#f92672">EOF</span>&gt;&gt; dd_vars
+</span></span><span style="display:flex;"><span>export DD_API_KEY=&#34;DATADOG API KEY&#34;
+</span></span><span style="display:flex;"><span>export NETWORK=&#34;cypress&#34;
+</span></span><span style="display:flex;"><span>export NODE_NAME=&#34;&lt;<span style="color:#f92672">cco_name</span>&gt;-pn-01&#34; or &#34;&lt;<span style="color:#f92672">cco_name</span>&gt;-pn-02&#34;
+</span></span><span style="display:flex;"><span>export NODE_TYPE=&#34;pn&#34;
+</span></span><span style="display:flex;"><span>export INSTANCE=&#34;pn1&#34; or &#34;pn2&#34;
+</span></span><span style="display:flex;"><span>LOG_DIR=&#34;&lt;<span style="color:#f92672">your_klaytn_home_path</span>&gt;/kpnd/log&#34;
+</span></span><span style="display:flex;"><span>EOF
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>$ source dd_vars
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>$ bash -c &#34;$(curl -L https://raw.githubusercontent.com/klaytn/datadog-agent-install./main/install-datadog-agent.sh)&#34;</span></span></code></pre></div>
 <em>** DD_API_KEY will be shared with you by Slack DM.</em><br>
-<em>** Please use lowercase, then append &lsquo;pn-01&rsquo; or &lsquo;pn-02&rsquo; for HOST_NAME</em><br>
-<em>** For example, <code>HOST_NAME=cco_name-pn-01 or cco_name-pn-02</code></em></p>
+<em>** Please use lowercase for NODE_NAME.</em><br>
+<em>** For example, <code>LOG_DIR = /data/kpnd/log or /data/kpnd/logs, NODE_NAME=cco_name-pn-01 or cco_name-pn-02</code></em></p>
 <h4 id="3-to-allow-your-nodes-to-communicate-datadog-please-add-these-ip-addresses-to-the-firewall-of-each-node">3. To allow your nodes to communicate Datadog, please add these IP addresses to the firewall of each node.</h4>
 <h5 id="port-number-443-3233144020">Port number 443 <code>3.233.144.0/20</code></h5>
 <h5 id="port-number-10516-32331526332">Port number 10516 <code>3.233.152.63/32</code></h5>
@@ -1224,16 +1246,16 @@ If you finish this step, please click the next button <code>&gt;</code> on the r
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/klaytn-cypress-setup-workshop/js/clipboard.min.js?1666830581"></script>
-    <script src="/klaytn-cypress-setup-workshop/js/perfect-scrollbar.min.js?1666830581"></script>
-    <script src="/klaytn-cypress-setup-workshop/js/perfect-scrollbar.jquery.min.js?1666830581"></script>
-    <script src="/klaytn-cypress-setup-workshop/js/jquery.sticky.js?1666830581"></script>
-    <script src="/klaytn-cypress-setup-workshop/js/featherlight.min.js?1666830581"></script>
-    <script src="/klaytn-cypress-setup-workshop/js/highlight.pack.js?1666830581"></script>
+    <script src="/klaytn-cypress-setup-workshop/js/clipboard.min.js?1666838990"></script>
+    <script src="/klaytn-cypress-setup-workshop/js/perfect-scrollbar.min.js?1666838990"></script>
+    <script src="/klaytn-cypress-setup-workshop/js/perfect-scrollbar.jquery.min.js?1666838990"></script>
+    <script src="/klaytn-cypress-setup-workshop/js/jquery.sticky.js?1666838990"></script>
+    <script src="/klaytn-cypress-setup-workshop/js/featherlight.min.js?1666838990"></script>
+    <script src="/klaytn-cypress-setup-workshop/js/highlight.pack.js?1666838990"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/klaytn-cypress-setup-workshop/js/modernizr.custom-3.6.0.js?1666830581"></script>
-    <script src="/klaytn-cypress-setup-workshop/js/learn.js?1666830581"></script>
-    <script src="/klaytn-cypress-setup-workshop/js/hugo-learn.js?1666830581"></script>
+    <script src="/klaytn-cypress-setup-workshop/js/modernizr.custom-3.6.0.js?1666838990"></script>
+    <script src="/klaytn-cypress-setup-workshop/js/learn.js?1666838990"></script>
+    <script src="/klaytn-cypress-setup-workshop/js/hugo-learn.js?1666838990"></script>
     
         
             <script src="https://unpkg.com/mermaid@8.8.0/dist/mermaid.min.js"></script>
