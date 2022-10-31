@@ -15,6 +15,7 @@ draft: false
 ```52.79.134.72```   
 ```52.78.232.39```
 {{< line_break >}}
+{{< line_break >}}
 
 ##### 2) For communication and multichannel across CCO CNs in the Cypress network, TCP ```32323-32324``` and UDP ``` 32323 ``` from existing CCO's CNs should be allowed in your CN firewall configuration.
 _** The existing CCO's CNs IP addresses will be provided by Slack DM._
