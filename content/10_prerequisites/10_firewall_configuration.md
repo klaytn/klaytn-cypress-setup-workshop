@@ -18,5 +18,8 @@ draft: false
 ##### 2) For communication and multichannel across CCO CNs in the Cypress network, TCP ```32323-32324``` and UDP ``` 32323 ``` from existing CCO's CNs should be allowed in your CN firewall configuration.
 _** The existing CCO's CNs IP addresses will be provided by Slack DM._
 
+##### 3) For communication and multichannel across Bootnode in the Cypress network, UDP ``` 32323 ``` from existing CCO's CNs should be allowed in your CN firewall configuration.
+_** The existing Bootnode IP addresses will be provided by Slack DM._
+
 {{< line_break >}}
 If you finish this step, please click the next button ```>``` on the right side of this page.
