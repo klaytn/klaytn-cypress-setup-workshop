@@ -8,9 +8,6 @@
     <loc>/klaytn-cypress-setup-workshop/50_start_services/10_start_klaytn_service.html</loc>
     <lastmod>2022-07-11T18:37:31+09:00</lastmod>
   </url><url>
-    <loc>/klaytn-cypress-setup-workshop/40_configure_network/10_prepare_genesis_for_cypress.html</loc>
-    <lastmod>2022-07-11T17:10:58+09:00</lastmod>
-  </url><url>
     <loc>/klaytn-cypress-setup-workshop/30_download_chaindata/10_download_chaindata.html</loc>
     <lastmod>2022-07-11T15:42:53+09:00</lastmod>
   </url><url>
@@ -26,7 +23,7 @@
     <loc>/klaytn-cypress-setup-workshop/50_start_services/20_start_monitoring_services.html</loc>
     <lastmod>2022-07-11T18:39:03+09:00</lastmod>
   </url><url>
-    <loc>/klaytn-cypress-setup-workshop/40_configure_network/20_node_configuration.html</loc>
+    <loc>/klaytn-cypress-setup-workshop/40_configure_network/10_node_configuration.html</loc>
     <lastmod>2022-07-11T17:55:05+09:00</lastmod>
   </url><url>
     <loc>/klaytn-cypress-setup-workshop/30_download_chaindata/20_unarchive_chaindata.html</loc>
@@ -41,7 +38,7 @@
     <loc>/klaytn-cypress-setup-workshop/50_start_services/30_check_the_services.html</loc>
     <lastmod>2022-07-11T18:42:35+09:00</lastmod>
   </url><url>
-    <loc>/klaytn-cypress-setup-workshop/40_configure_network/30_pn_configuration.html</loc>
+    <loc>/klaytn-cypress-setup-workshop/40_configure_network/20_pn_configuration.html</loc>
     <lastmod>2022-07-11T17:55:05+09:00</lastmod>
   </url><url>
     <loc>/klaytn-cypress-setup-workshop/20_network_reset/30_remove_data_and_log.html</loc>
@@ -53,22 +50,19 @@
     <loc>/klaytn-cypress-setup-workshop/50_start_services/40_check_monitoring_dashboard.html</loc>
     <lastmod>2022-07-14T19:11:35+09:00</lastmod>
   </url><url>
-    <loc>/klaytn-cypress-setup-workshop/40_configure_network/40_node_initialization.html</loc>
-    <lastmod>2022-07-11T17:23:03+09:00</lastmod>
-  </url><url>
     <loc>/klaytn-cypress-setup-workshop/40_configure_network.html</loc>
     <lastmod>2022-07-11T10:25:55+09:00</lastmod>
   </url><url>
     <loc>/klaytn-cypress-setup-workshop/50_start_services/50_remove_chaindata.html</loc>
     <lastmod>2022-07-14T19:26:47+09:00</lastmod>
   </url><url>
-    <loc>/klaytn-cypress-setup-workshop/40_configure_network/50_telegraf_configuration.html</loc>
+    <loc>/klaytn-cypress-setup-workshop/40_configure_network/30_telegraf_configuration.html</loc>
     <lastmod>2022-07-14T16:44:50+09:00</lastmod>
   </url><url>
     <loc>/klaytn-cypress-setup-workshop/50_start_services.html</loc>
     <lastmod>2022-07-11T18:26:28+09:00</lastmod>
   </url><url>
-    <loc>/klaytn-cypress-setup-workshop/40_configure_network/60_datadog_configuration.html</loc>
+    <loc>/klaytn-cypress-setup-workshop/40_configure_network/40_datadog_configuration.html</loc>
     <lastmod>2022-07-20T15:33:50+09:00</lastmod>
   </url><url>
     <loc>/klaytn-cypress-setup-workshop/60_conclusion.html</loc>

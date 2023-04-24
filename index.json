@@ -14,13 +14,6 @@
 	"content": "\n1. Start the Klaytn service, if it is running. 1) For CN, $ sudo systemctl status kcnd $ sudo systemctl start kcnd $ sudo systemctl status kcnd 2) For PN, $ sudo systemctl status kpnd $ sudo systemctl start kpnd $ sudo systemctl status kpnd 3) If the services are not installed from yum, you can start the service like below, $ sudo \u0026lt;installation_path\u0026gt;/kcnd status $ sudo \u0026lt;installation_path\u0026gt;/kcnd start $ sudo \u0026lt;installation_path\u0026gt;/kcnd status If you finish this step, please click the next button \u0026gt; on the right side of this page.\n"
 },
 {
-	"uri": "/klaytn-cypress-setup-workshop/40_configure_network/10_prepare_genesis_for_cypress.html",
-	"title": "Prepare genesis.json for Cypress network",
-	"tags": [],
-	"description": "",
-	"content": "\n1. Remove or backup existing genesis.json for Baobab. 1) For CN, $ mv \u0026lt;your_klaytn_home_path\u0026gt;/kcnd/data/genesis.json \u0026lt;your_klaytn_home_path\u0026gt;/kcnd/data/genesis.json.baobab 2) For PN, $ mv \u0026lt;your_klaytn_home_path\u0026gt;/kpnd/data/genesis.json \u0026lt;your_klaytn_home_path\u0026gt;/kpnd/data/genesis.json.baobab 2. Download the genesis.json for Cypress network. 1) For CN, $ curl -X GET https://packages.klaytn.net/cypress/genesis.json -o \u0026lt;your_klaytn_home_path\u0026gt;/kcnd/data/genesis.json 2) For PN, $ curl -X GET https://packages.klaytn.net/cypress/genesis.json -o \u0026lt;your_klaytn_home_path\u0026gt;/kpnd/data/genesis.json 3. Check the value of chainId in the genesis.json downloaded. ** Please note that Cypress network id is 8217.\n1) For CN, $ grep \u0026#34;chainId\u0026#34; \u0026lt;your_klaytn_home_path\u0026gt;/kcnd/data/genesis.json \u0026#34;chainId\u0026#34;: 8217, 2) For PN, $ grep \u0026#34;chainId\u0026#34; \u0026lt;your_klaytn_home_path\u0026gt;/kpnd/data/genesis.json \u0026#34;chainId\u0026#34;: 8217, ** If you want to get more information about genesis.json, please refer this link below.\nhttps://docs.klaytn.foundation/node/service-chain/references/genesis\nIf you finish this step, please click the next button \u0026gt; on the right side of this page.\n"
-},
-{
 	"uri": "/klaytn-cypress-setup-workshop/30_download_chaindata/10_download_chaindata.html",
 	"title": "Download the latest Cypress chaindata",
 	"tags": [],
@@ -56,7 +49,7 @@
 	"content": "\n2. Start monitoring services. 1) For both CN and PN, start the Telegraf service. $ sudo systemctl status telegraf $ sudo systemctl start telegraf $ sudo systemctl status telegraf 2) For both CN and PN, start the Datadog service if it is stopped. $ sudo systemctl status datadog-agent $ sudo systemctl start datadog-agent $ sudo systemctl status datadog-agent If you finish this step, please click the next button \u0026gt; on the right side of this page.\n"
 },
 {
-	"uri": "/klaytn-cypress-setup-workshop/40_configure_network/20_node_configuration.html",
+	"uri": "/klaytn-cypress-setup-workshop/40_configure_network/10_node_configuration.html",
 	"title": "Node Configuration",
 	"tags": [],
 	"description": "",
@@ -91,7 +84,7 @@
 	"content": "\n3. Watch the service log to confirm if your nodes are correctly joined. ** If the node is not a proposer at that block, and the consensus is successful, the node have executed(==validates) the block. In other words, a block is inserted. _** You can refer this document for more details about node log.\n1) For CN, $ tail \u0026lt;your_klaytn_home_path\u0026gt;/kcnd/log/kcnd.out INFO Inserted a new block number=14 hash=13cbfc…f007fc txs=0 gas=0 elapsed=793.458µs processTxs=167ns finalize=157.708µs validateState=7.542µs totalWrite=443.417µs trieWrite=256.667µs 2) For PN, $ tail \u0026lt;your_klaytn_home_path\u0026gt;/kpnd/log/kpnd.out INFO Inserted a new block number=14 hash=13cbfc…f007fc txs=0 gas=0 elapsed=793.458µs processTxs=167ns finalize=157.708µs validateState=7.542µs totalWrite=443.417µs trieWrite=256.667µs 3) Please note that the above message will be found when Klaytn operators add your node as a peer. So you may face the below messages instead. You can ignore error messages as below. It will disappear after some follow-up tasks from Klaytn operators. err=\u0026#34;Genesis block mismatch\u0026#34; err=\u0026#34;unauthorized address” If you finish this step, please click the next button \u0026gt; on the right side of this page.\n"
 },
 {
-	"uri": "/klaytn-cypress-setup-workshop/40_configure_network/30_pn_configuration.html",
+	"uri": "/klaytn-cypress-setup-workshop/40_configure_network/20_pn_configuration.html",
 	"title": "PN static-nodes.json",
 	"tags": [],
 	"description": "",
@@ -119,13 +112,6 @@
 	"content": "\n4. Take a look at Grafana dashboard to confirm if your nodes are correctly joined to Cypress network. Link : Cypress Grafana ** You can refer this document to check your services further.\nhttps://docs.klaytn.foundation/node/core-cell/installation-guide/testing-the-core-cell#kcn-console-kpn-console If your CN/PN Inter Connections looks 2 and blockNumber increases correctly in this dashboard, everything is configured normally. If you complete all the previous steps, please send a message to Klaytn DevOps by Slack. If you finish this step, please click the next button \u0026gt; on the right side of this page.\n"
 },
 {
-	"uri": "/klaytn-cypress-setup-workshop/40_configure_network/40_node_initialization.html",
-	"title": "Node Initialization",
-	"tags": [],
-	"description": "",
-	"content": "\n1. Now, we will initialize each node using the Cypress genesis file. 1) For CN, $ cd \u0026lt;your_klaytn_home_path\u0026gt;/kcnd/data $ kcn --networkid 8217 init --datadir \u0026lt;your_klaytn_home_path\u0026gt;/kcnd/data genesis.json 2) For PN, $ cd \u0026lt;your_klaytn_home_path\u0026gt;/kpnd/data $ kpn --networkid 8217 init --datadir \u0026lt;your_klaytn_home_path\u0026gt;/kpnd/data genesis.json If you finish this step, please click the next button \u0026gt; on the right side of this page.\n"
-},
-{
 	"uri": "/klaytn-cypress-setup-workshop/40_configure_network.html",
 	"title": "Configure Cypress Network",
 	"tags": [],
@@ -140,7 +126,7 @@
 	"content": "\n1. Now, the donwloaded chaindata for Cypress can be removed, if you can confirm everything is done without any problem. 1) For both CN and PN, $ rm klaytn-cypress-chaindata-20220719010712.tar.gz If you finish this step, please click the next button \u0026gt; on the right side of this page.\n"
 },
 {
-	"uri": "/klaytn-cypress-setup-workshop/40_configure_network/50_telegraf_configuration.html",
+	"uri": "/klaytn-cypress-setup-workshop/40_configure_network/30_telegraf_configuration.html",
 	"title": "Telegraf Configuration",
 	"tags": [],
 	"description": "",
@@ -154,7 +140,7 @@
 	"content": "Chapter 5 Start the services Now, we are ready to start Klaytn service for Cypress. Please click the next button \u0026gt; on the right side of this page.\n"
 },
 {
-	"uri": "/klaytn-cypress-setup-workshop/40_configure_network/60_datadog_configuration.html",
+	"uri": "/klaytn-cypress-setup-workshop/40_configure_network/40_datadog_configuration.html",
 	"title": "Datadog Configuration",
 	"tags": [],
 	"description": "",
