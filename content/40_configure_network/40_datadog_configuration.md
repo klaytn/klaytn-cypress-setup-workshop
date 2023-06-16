@@ -12,12 +12,12 @@ draft: false
 ##### 1) For CN, 
 {{< highlight html >}}
 $ cat <<EOF>> dd_vars
-export DD_API_KEY="DATADOG API KEY"
-export NETWORK="cypress"
-export NODE_NAME="<cco_name>-cn-01" 
+export DD_API_KEY=DATADOG API KEY
+export NETWORK=cypress
+export NODE_NAME=<cco_name>-cn-01
 export NODE_TYPE=cn 
 export INSTANCE=cn 
-export LOG_DIR="<your_klaytn_home_path>/kcnd/log"
+export LOG_DIR=<your_klaytn_home_path>/kcnd/log
 EOF
 
 $ source dd_vars
@@ -31,12 +31,12 @@ _** For example, ```LOG_DIR = /data/kcnd/log or /data/kcnd/logs, NODE_NAME=cco_n
 ##### 2) For PN,
 {{< highlight html >}}
 $ cat <<EOF>> dd_vars
-export DD_API_KEY="DATADOG API KEY"
-export NETWORK="cypress"
-export NODE_NAME="<cco_name>-pn-01" or "<cco_name>-pn-02"
-export NODE_TYPE="pn"
-export INSTANCE="pn1" or "pn2"
-LOG_DIR="<your_klaytn_home_path>/kpnd/log"
+export DD_API_KEY=DATADOG API KEY
+export NETWORK=cypress
+export NODE_NAME=<cco_name>-pn-01 or <cco_name>-pn-02
+export NODE_TYPE=pn
+export INSTANCE=pn1 or pn2
+LOG_DIR=<your_klaytn_home_path>/kpnd/log
 EOF
 
 $ source dd_vars
