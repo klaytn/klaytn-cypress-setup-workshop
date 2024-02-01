@@ -13,6 +13,8 @@ _** You can refer to the chaindata size via **[Cypress snapshot archive](https:/
 {{< line_break >}}
 
 ##### 1) For CN and PN1
+_** Please note that this step will take a lot of time to download since snapshot is more than 1.4 TB. If you want to reduce the time, please refer the next step._   
+_** The latest chaindata name can be different with this example due to the date information._
 {{< highlight html >}}
 $ URL=`curl -s https://packages.klaytn.net/cypress/chaindata/ |grep latest |awk -F'"' '{print $2}'`
 $ echo $URL
