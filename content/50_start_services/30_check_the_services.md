@@ -10,7 +10,7 @@ draft: false
 #### 3. Watch the service log to confirm if your nodes are correctly joined.
 
 _** If the node is not a proposer at that block, and the consensus is successful, the node have executed(==validates) the block. In other words, a block is inserted._
-_** You can refer [this document](https://docs.klaytn.foundation/node/node-log#info-logs) for more details about node log. 
+_** You can refer [this document](https://docs.klaytn.foundation/docs/misc/operation/node-log/#info-logs) for more details about node log. 
 
 ##### 1) For CN,
 {{< highlight html >}}

@@ -13,7 +13,7 @@ draft: false
 {{< line_break >}}
 
 _** You can refer this document to check your services further._   
-_https://docs.klaytn.foundation/node/core-cell/installation-guide/testing-the-core-cell#kcn-console-kpn-console_
+_https://docs.klaytn.foundation/docs/nodes/core-cell/install/install-proxy-nodes/#kpn-console-_
 {{< line_break >}}
 
 1. If your CN/PN Inter Connections looks 2 and blockNumber increases correctly in this dashboard, everything is configured normally.  
