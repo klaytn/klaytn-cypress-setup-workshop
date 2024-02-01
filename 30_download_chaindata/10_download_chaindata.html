@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Hugo 0.115.3">
+    <meta name="generator" content="Hugo 0.122.0">
     <meta name="description" content="">
 <meta name="author" content="Klaytn DevOps team">
 
@@ -12,22 +12,22 @@
     <title>Download the latest Cypress chaindata - Klaytn CCO Onboarding - Cypress</title>
 
     
-    <link href="/klaytn-cypress-setup-workshop/css/nucleus.css?1689727115" rel="stylesheet">
-    <link href="/klaytn-cypress-setup-workshop/css/fontawesome-all.min.css?1689727115" rel="stylesheet">
-    <link href="/klaytn-cypress-setup-workshop/css/hybrid.css?1689727115" rel="stylesheet">
-    <link href="/klaytn-cypress-setup-workshop/css/featherlight.min.css?1689727115" rel="stylesheet">
-    <link href="/klaytn-cypress-setup-workshop/css/perfect-scrollbar.min.css?1689727115" rel="stylesheet">
-    <link href="/klaytn-cypress-setup-workshop/css/auto-complete.css?1689727115" rel="stylesheet">
-    <link href="/klaytn-cypress-setup-workshop/css/atom-one-dark-reasonable.css?1689727115" rel="stylesheet">
-    <link href="/klaytn-cypress-setup-workshop/css/theme.css?1689727115" rel="stylesheet">
-    <link href="/klaytn-cypress-setup-workshop/css/tabs.css?1689727115" rel="stylesheet">
-    <link href="/klaytn-cypress-setup-workshop/css/hugo-theme.css?1689727115" rel="stylesheet">
+    <link href="/klaytn-cypress-setup-workshop/css/nucleus.css?1706828787" rel="stylesheet">
+    <link href="/klaytn-cypress-setup-workshop/css/fontawesome-all.min.css?1706828787" rel="stylesheet">
+    <link href="/klaytn-cypress-setup-workshop/css/hybrid.css?1706828787" rel="stylesheet">
+    <link href="/klaytn-cypress-setup-workshop/css/featherlight.min.css?1706828787" rel="stylesheet">
+    <link href="/klaytn-cypress-setup-workshop/css/perfect-scrollbar.min.css?1706828787" rel="stylesheet">
+    <link href="/klaytn-cypress-setup-workshop/css/auto-complete.css?1706828787" rel="stylesheet">
+    <link href="/klaytn-cypress-setup-workshop/css/atom-one-dark-reasonable.css?1706828787" rel="stylesheet">
+    <link href="/klaytn-cypress-setup-workshop/css/theme.css?1706828787" rel="stylesheet">
+    <link href="/klaytn-cypress-setup-workshop/css/tabs.css?1706828787" rel="stylesheet">
+    <link href="/klaytn-cypress-setup-workshop/css/hugo-theme.css?1706828787" rel="stylesheet">
     
-    <link href="/klaytn-cypress-setup-workshop/css/theme-klaytn.css?1689727115" rel="stylesheet">
+    <link href="/klaytn-cypress-setup-workshop/css/theme-klaytn.css?1706828787" rel="stylesheet">
     
-    <link href="/klaytn-cypress-setup-workshop/css/foo.css?1689727115" rel="stylesheet"><link href="/klaytn-cypress-setup-workshop/css/bar.css?1689727115" rel="stylesheet">
+    <link href="/klaytn-cypress-setup-workshop/css/foo.css?1706828787" rel="stylesheet"><link href="/klaytn-cypress-setup-workshop/css/bar.css?1706828787" rel="stylesheet">
 
-    <script src="/klaytn-cypress-setup-workshop/js/jquery-3.3.1.min.js?1689727115"></script>
+    <script src="/klaytn-cypress-setup-workshop/js/jquery-3.3.1.min.js?1706828787"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -54,14 +54,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/klaytn-cypress-setup-workshop/js/lunr.min.js?1689727115"></script>
-<script type="text/javascript" src="/klaytn-cypress-setup-workshop/js/auto-complete.js?1689727115"></script>
+<script type="text/javascript" src="/klaytn-cypress-setup-workshop/js/lunr.min.js?1706828787"></script>
+<script type="text/javascript" src="/klaytn-cypress-setup-workshop/js/auto-complete.js?1706828787"></script>
 <script type="text/javascript">
     
         var baseurl = "\/klaytn-cypress-setup-workshop";
     
 </script>
-<script type="text/javascript" src="/klaytn-cypress-setup-workshop/js/search.js?1689727115"></script>
+<script type="text/javascript" src="/klaytn-cypress-setup-workshop/js/search.js?1706828787"></script>
 
     
   </div>
@@ -725,22 +725,36 @@
 <p><em>** You can refer to the chaindata size via <strong><a href="https://packages.klaytn.net/cypress/chaindata/">Cypress snapshot archive</a></strong> where the Cypress chaindata snapshots have been snapshotted.</em><br>
 <br />
 </p>
-<h5 id="1-download-the-latest-one-from-the-archive">1) Download the latest one from the archive.</h5>
-<p><em>** Please note that this step will take a lot of time to download since snapshot is more than 700 GB. If you want to reduce the time, please refer the next step.</em><br>
+<h5 id="1-for-cn-and-pn1">1) For CN and PN1</h5>
+<p><em>** Please note that this step will take a lot of time to download since snapshot is more than 1.4 TB. If you want to reduce the time, please refer the next step.</em><br>
 <em>** The latest chaindata name can be different with this example due to the date information.</em>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>$ URL=`curl -s https://packages.klaytn.net/cypress/chaindata/ |grep latest |awk -F&#39;&#34;&#39; &#39;{print $2}&#39;`
 </span></span><span style="display:flex;"><span>$ echo $URL
-</span></span><span style="display:flex;"><span>https://s3.ap-northeast-2.amazonaws.com/klaytn-chaindata/cypress/klaytn-cypress-chaindata-20220719010712.tar.gz
+</span></span><span style="display:flex;"><span>https://s3.ap-northeast-2.amazonaws.com/klaytn-chaindata/cypress/klaytn-cypress-chaindata-20240131010151.tar.gz
 </span></span><span style="display:flex;"><span>$ wget $URL</span></span></code></pre></div></p>
+<h5 id="2-for-pn2">2) For PN2</h5>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>$ URL=`curl -s https://packages.klaytn.net/cypress/pruning-chaindata/ |grep latest |awk -F&#39;&#34;&#39; &#39;{print $2}&#39;`
+</span></span><span style="display:flex;"><span>$ echo $URL
+</span></span><span style="display:flex;"><span>https://s3.ap-northeast-2.amazonaws.com/klaytn-chaindata/cypress/pruning/klaytn-cypress-pruning-chaindata-20240131010111.tar.gz
+</span></span><span style="display:flex;"><span>$ wget $URL</span></span></code></pre></div>
 <h5 id="2-optional---if-you-want-to-save-the-time-for-downloading-you-can-consider-using-axel-command">2) Optional - If you want to save the time for downloading, you can consider using <code>axel</code> command.</h5>
-<p><em>**<a href="https://github.com/axel-download-accelerator/axel">Axel</a> tries to accelerate the download process by using multiple connections per file.</em>
+<p><em>**<a href="https://github.com/axel-download-accelerator/axel">Axel</a> tries to accelerate the download process by using multiple connections per file.</em></p>
+<h5 id="1-for-cn-and-pn1-1">1) For CN and PN1</h5>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>(Amazon Linux 2) $ sudo amazon-linux-extras install epel
 </span></span><span style="display:flex;"><span>(CentOS) $ sudo yum install epel-release -y
 </span></span><span style="display:flex;"><span>$ sudo yum install axel -y
-</span></span><span style="display:flex;"><span>$ URL=`curl -s https://packages.klaytn.net/cypress/chaindata/ |grep latest |awk -F&#39;&#34;&#39; &#39;{print $2}&#39;`
+</span></span><span style="display:flex;"><span>$ URL=`curl -s https://packages.klaytn.net/baobab/chaindata/ |grep latest |awk -F&#39;&#34;&#39; &#39;{print $2}&#39;`
 </span></span><span style="display:flex;"><span>$ echo $URL
-</span></span><span style="display:flex;"><span>https://s3.ap-northeast-2.amazonaws.com/klaytn-chaindata/cypress/klaytn-cypress-chaindata-20220719010712.tar.gz
-</span></span><span style="display:flex;"><span>$ axel -n8 $URL</span></span></code></pre></div></p>
+</span></span><span style="display:flex;"><span>https://s3.ap-northeast-2.amazonaws.com/klaytn-chaindata/cypress/klaytn-cypress-chaindata-20240131010151.tar.gz
+</span></span><span style="display:flex;"><span>$ axel -n8 $URL</span></span></code></pre></div>
+<h5 id="2-for-pn2-1">2) For PN2</h5>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>(Amazon Linux 2) $ sudo amazon-linux-extras install epel
+</span></span><span style="display:flex;"><span>(CentOS) $ sudo yum install epel-release -y
+</span></span><span style="display:flex;"><span>$ sudo yum install axel -y
+</span></span><span style="display:flex;"><span>$ URL=`curl -s https://packages.klaytn.net/baobab/pruning-chaindata/ |grep latest |awk -F&#39;&#34;&#39; &#39;{print $2}&#39;`
+</span></span><span style="display:flex;"><span>$ echo $URL
+</span></span><span style="display:flex;"><span>https://s3.ap-northeast-2.amazonaws.com/klaytn-chaindata/cypress/pruning/klaytn-cypress-pruning-chaindata-20240131010111.tar.gz
+</span></span><span style="display:flex;"><span>$ axel -n8 $URL</span></span></code></pre></div>
 <p><br />
 
 If you finish this step, please click the next button <code>&gt;</code> on the right side of this page.</p>
@@ -1157,16 +1171,16 @@ If you finish this step, please click the next button <code>&gt;</code> on the r
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/klaytn-cypress-setup-workshop/js/clipboard.min.js?1689727115"></script>
-    <script src="/klaytn-cypress-setup-workshop/js/perfect-scrollbar.min.js?1689727115"></script>
-    <script src="/klaytn-cypress-setup-workshop/js/perfect-scrollbar.jquery.min.js?1689727115"></script>
-    <script src="/klaytn-cypress-setup-workshop/js/jquery.sticky.js?1689727115"></script>
-    <script src="/klaytn-cypress-setup-workshop/js/featherlight.min.js?1689727115"></script>
-    <script src="/klaytn-cypress-setup-workshop/js/highlight.pack.js?1689727115"></script>
+    <script src="/klaytn-cypress-setup-workshop/js/clipboard.min.js?1706828787"></script>
+    <script src="/klaytn-cypress-setup-workshop/js/perfect-scrollbar.min.js?1706828787"></script>
+    <script src="/klaytn-cypress-setup-workshop/js/perfect-scrollbar.jquery.min.js?1706828787"></script>
+    <script src="/klaytn-cypress-setup-workshop/js/jquery.sticky.js?1706828787"></script>
+    <script src="/klaytn-cypress-setup-workshop/js/featherlight.min.js?1706828787"></script>
+    <script src="/klaytn-cypress-setup-workshop/js/highlight.pack.js?1706828787"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/klaytn-cypress-setup-workshop/js/modernizr.custom-3.6.0.js?1689727115"></script>
-    <script src="/klaytn-cypress-setup-workshop/js/learn.js?1689727115"></script>
-    <script src="/klaytn-cypress-setup-workshop/js/hugo-learn.js?1689727115"></script>
+    <script src="/klaytn-cypress-setup-workshop/js/modernizr.custom-3.6.0.js?1706828787"></script>
+    <script src="/klaytn-cypress-setup-workshop/js/learn.js?1706828787"></script>
+    <script src="/klaytn-cypress-setup-workshop/js/hugo-learn.js?1706828787"></script>
     
         
             <script src="https://unpkg.com/mermaid@8.8.0/dist/mermaid.min.js"></script>

@@ -6,26 +6,21 @@
     <description>Recent content in Fast Sync with Cypress on Klaytn CCO Onboarding - Cypress</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 11 Jul 2022 10:25:05 +0900</lastBuildDate><atom:link href="/klaytn-cypress-setup-workshop/30_download_chaindata/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 11 Jul 2022 15:43:06 +0900</lastBuildDate>
+    <atom:link href="/klaytn-cypress-setup-workshop/30_download_chaindata/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Download the latest Cypress chaindata</title>
       <link>/klaytn-cypress-setup-workshop/30_download_chaindata/10_download_chaindata.html</link>
       <pubDate>Mon, 11 Jul 2022 15:42:53 +0900</pubDate>
-      
       <guid>/klaytn-cypress-setup-workshop/30_download_chaindata/10_download_chaindata.html</guid>
-      <description>1. Download the latest chaindata snapshot from the Cypress snapshot archive. 0) Before proceeding, please check if your disk space is enough to store and extract the Cypress chaindata. ** You can refer to the chaindata size via Cypress snapshot archive where the Cypress chaindata snapshots have been snapshotted.
-1) Download the latest one from the archive. ** Please note that this step will take a lot of time to download since snapshot is more than 700 GB.</description>
+      <description>1. Download the latest chaindata snapshot from the Cypress snapshot archive. 0) Before proceeding, please check if your disk space is enough to store and extract the Cypress chaindata. ** You can refer to the chaindata size via Cypress snapshot archive where the Cypress chaindata snapshots have been snapshotted.&#xA;1) For CN and PN1 ** Please note that this step will take a lot of time to download since snapshot is more than 1.</description>
     </item>
-    
     <item>
       <title>Extract the chaindata</title>
       <link>/klaytn-cypress-setup-workshop/30_download_chaindata/20_unarchive_chaindata.html</link>
       <pubDate>Mon, 11 Jul 2022 15:43:06 +0900</pubDate>
-      
       <guid>/klaytn-cypress-setup-workshop/30_download_chaindata/20_unarchive_chaindata.html</guid>
-      <description>2. Extract the chaindata downloaded to the DATA_DIR. 1) For CN, $ tar -C &amp;lt;your_klaytn_home_path&amp;gt;/kcnd/data -xvf klaytn-cypress-chaindata-20220719010712.tar.gz ** If you want to reduce the time for extracting, please refer this pigz example. (Amazon Linux 2) $ sudo amazon-linux-extras install epel (CentOS) $ sudo yum install epel-release -y $ sudo yum install pigz $ tar -I pigz -C &amp;lt;your_klaytn_home_path&amp;gt;/kcnd/data -xvf klaytn-cypress-chaindata-20220719010712.tar.gz
-2) For PN, $ tar -C &amp;lt;your_klaytn_home_path&amp;gt;/kpnd/data -xvf klaytn-cypress-chaindata-20220719010712.tar.gz If you finish this step, please click the next button &amp;gt; on the right side of this page.</description>
+      <description>2. Extract the chaindata downloaded to the DATA_DIR. 1) For CN, $ tar -C &amp;lt;your_klaytn_home_path&amp;gt;/kcnd/data -xvf klaytn-cypress-chaindata-20240131010151.tar.gz --exclude klay/chaindata/receipts 2) For PN1, $ tar -C &amp;lt;your_klaytn_home_path&amp;gt;/kpnd/data -xvf klaytn-cypress-chaindata-20240131010151.tar.gz --exclude klay/chaindata/receipts 3) For PN2, $ tar -C &amp;lt;your_klaytn_home_path&amp;gt;/kpnd/data -xvf klaytn-cypress-pruning-chaindata-20240131010111.tar.gz --exclude klay/chaindata/receipts If you finish this step, please click the next button &amp;gt; on the right side of this page.</description>
     </item>
-    
   </channel>
 </rss>
