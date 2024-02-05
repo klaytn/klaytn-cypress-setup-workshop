@@ -22,7 +22,7 @@ BOOTNODES="kni://b286e4140aea469992146c299f8915e34d59a014c29a045de41e57801476111
 ##### 2) For PN1, your configuration should be modified as shown below.
 {{< highlight html >}}
 $ egrep "^NETWORK|NO_DISCOVER|BOOTNODES" /etc/kpnd/conf/kpnd.conf
-NETWORK="baobab"
+NETWORK="cypress"
 NETWORK_ID=
 NO_DISCOVER=1 # setting 1 to disable discovery
 BOOTNODES=""
@@ -31,7 +31,7 @@ BOOTNODES=""
 ##### 3) For PN2, your configuration should be modified as shown below.
 {{< highlight html >}}
 $ egrep "^NETWORK|NO_DISCOVER|BOOTNODES|ADDITIONAL" /etc/kpnd/conf/kpnd.conf
-NETWORK="baobab"
+NETWORK="cypress"
 NETWORK_ID=
 NO_DISCOVER=1 # setting 1 to disable discovery
 BOOTNODES=""
