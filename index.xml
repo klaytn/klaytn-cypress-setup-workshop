@@ -41,7 +41,7 @@
       <link>/klaytn-cypress-setup-workshop/10_prerequisites/20_package_installation.html</link>
       <pubDate>Mon, 11 Jul 2022 19:18:57 +0900</pubDate>
       <guid>/klaytn-cypress-setup-workshop/10_prerequisites/20_package_installation.html</guid>
-      <description>2. Installation of Klaytn packages for CN and PN ** We&amp;rsquo;ve already installed packages during the Pre-cypress stage. If you need to install newly, please refer these documents.&#xA;1) CN - https://docs.klaytn.foundation/node/core-cell/installation-guide/consensus-node-setup/installation-guide 2) PN - https://docs.klaytn.foundation/node/core-cell/installation-guide/proxy-node-setup/installation-guide If you finish this step, please click the next button &amp;gt; on the right side of this page.</description>
+      <description>2. Installation of Klaytn packages for CN and PN ** We&amp;rsquo;ve already installed packages during the Pre-cypress stage. If you need to install newly, please refer these documents.&#xA;1) CN - https://docs.klaytn.foundation/docs/nodes/core-cell/install/install-consensus-nodes/ 2) PN - https://docs.klaytn.foundation/docs/nodes/core-cell/install/install-proxy-nodes/ If you finish this step, please click the next button &amp;gt; on the right side of this page.</description>
     </item>
     <item>
       <title>Start the monitoring services</title>

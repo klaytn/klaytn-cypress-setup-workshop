@@ -39,7 +39,7 @@
 	"title": "Package Installation",
 	"tags": [],
 	"description": "",
-	"content": "\n2. Installation of Klaytn packages for CN and PN ** We\u0026rsquo;ve already installed packages during the Pre-cypress stage. If you need to install newly, please refer these documents.\n1) CN - https://docs.klaytn.foundation/node/core-cell/installation-guide/consensus-node-setup/installation-guide 2) PN - https://docs.klaytn.foundation/node/core-cell/installation-guide/proxy-node-setup/installation-guide If you finish this step, please click the next button \u0026gt; on the right side of this page.\n"
+	"content": "\n2. Installation of Klaytn packages for CN and PN ** We\u0026rsquo;ve already installed packages during the Pre-cypress stage. If you need to install newly, please refer these documents.\n1) CN - https://docs.klaytn.foundation/docs/nodes/core-cell/install/install-consensus-nodes/ 2) PN - https://docs.klaytn.foundation/docs/nodes/core-cell/install/install-proxy-nodes/ If you finish this step, please click the next button \u0026gt; on the right side of this page.\n"
 },
 {
 	"uri": "/klaytn-cypress-setup-workshop/50_start_services/20_start_monitoring_services.html",
