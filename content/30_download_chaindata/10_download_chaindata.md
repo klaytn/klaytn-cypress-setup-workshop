@@ -21,7 +21,7 @@ $ echo $URL
 https://s3.ap-northeast-2.amazonaws.com/klaytn-chaindata/cypress/pruning/klaytn-cypress-pruning-chaindata-20240131010111.tar.gz
 $ wget $URL
 {{< /highlight >}}
-##### 2) For PN2
+##### 2) For PN
 {{< highlight html >}}
 $ URL=`curl -s https://packages.klaytn.net/cypress/pruning-chaindata/ |grep latest |awk -F'"' '{print $2}'`
 $ echo $URL
@@ -31,7 +31,7 @@ $ wget $URL
 
 ##### 2) Optional - If you want to save the time for downloading, you can consider using ```axel``` command.   
 _**[Axel](https://github.com/axel-download-accelerator/axel) tries to accelerate the download process by using multiple connections per file._
-##### 1) For CN and PN1
+##### 1) For CN
 {{< highlight html >}}
 (Amazon Linux 2) $ sudo amazon-linux-extras install epel
 (CentOS) $ sudo yum install epel-release -y
@@ -41,7 +41,7 @@ $ echo $URL
 https://s3.ap-northeast-2.amazonaws.com/klaytn-chaindata/cypress/pruning/klaytn-cypress-pruning-chaindata-20240131010111.tar.gz
 $ axel -n8 $URL
 {{< /highlight >}}
-##### 2) For PN2
+##### 2) For PN
 {{< highlight html >}}
 (Amazon Linux 2) $ sudo amazon-linux-extras install epel
 (CentOS) $ sudo yum install epel-release -y
