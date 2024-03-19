@@ -9,11 +9,11 @@ draft: false
 {{< line_break >}}
 #### 1. Download the latest chaindata snapshot from the Cypress snapshot archive.
 ##### 0) Before proceeding, please check if your disk space is enough to store and extract the Cypress chaindata.
-_** You can refer to the chaindata size via **[Cypress snapshot archive](https://packages.klaytn.net/cypress/chaindata/)** where the Cypress chaindata snapshots have been snapshotted._   
+_** You can refer to the chaindata size via **[Cypress snapshot archive](https://packages.klaytn.net/cypress/pruning-chaindata/)** where the Cypress chaindata snapshots have been snapshotted._   
 {{< line_break >}}
 
 ##### 1) For CN
-_** Please note that this step will take a lot of time to download since snapshot is more than 1.4 TB. If you want to reduce the time, please refer the next step._   
+_** Please note that this step will take a lot of time to download since snapshot is more than 1.4 TB, so we recommned to use temporary disk for downloading. If you want to reduce the time, please refer the next step._   
 _** The latest chaindata name can be different with this example due to the date information._
 {{< highlight html >}}
 $ URL=`curl -s https://packages.klaytn.net/cypress/pruning-chaindata/  |grep latest |awk -F'"' '{print $2}'`
