@@ -24,7 +24,7 @@ $ sudo rm /etc/yum.repos.d/klaytn.repo
 $ sudo curl -o /etc/yum.repos.d/kaia.repo https://packages.kaia.io/config/rhel/7/kaia.repo
 $ sudo yum list k*nd
 $ yum remove k*nd -y
-$ sudo yum install k*nd-v1.0.2-0.el7.x86_64.rpm
+$ sudo yum install k*nd-v1.0.2-0.el7
 $ cp k*nd.conf /etc/k*nd/conf/
 $ systemctl start k*nd
 $ k*n version
