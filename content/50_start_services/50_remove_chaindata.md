@@ -7,7 +7,7 @@ draft: false
 ---
 
 {{< line_break >}}
-#### 1. Now, the donwloaded chaindata for Cypress can be removed, if you can confirm everything is done without any problem.
+#### 5. Now, the donwloaded chaindata for Cypress can be removed, if you can confirm everything is done without any problem.
 
 ##### 1) For both CN and PN,
 {{< highlight html >}}
