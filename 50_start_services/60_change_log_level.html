@@ -9,7 +9,7 @@
 
     <link rel="shortcut icon" href="/klaytn-cypress-setup-workshop/images/Logo-2.png" type="image/x-icon" />
 
-    <title>Check Monitoring Dashboard - Klaytn CCO Onboarding - Cypress</title>
+    <title>Change log level - Klaytn CCO Onboarding - Cypress</title>
 
     
     <link href="/klaytn-cypress-setup-workshop/css/nucleus.css?1724128546" rel="stylesheet">
@@ -37,7 +37,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/klaytn-cypress-setup-workshop/50_start_services/40_check_monitoring_dashboard.html">
+  <body class="" data-url="/klaytn-cypress-setup-workshop/50_start_services/60_change_log_level.html">
     <nav id="sidebar" class="showVisitedLinks">
 
 
@@ -547,7 +547,7 @@
  
   
     
-      <li data-nav-id="/50_start_services/40_check_monitoring_dashboard.html" title="Check Monitoring Dashboard" class="dd-item active">
+      <li data-nav-id="/50_start_services/40_check_monitoring_dashboard.html" title="Check Monitoring Dashboard" class="dd-item ">
         <a href="/klaytn-cypress-setup-workshop/50_start_services/40_check_monitoring_dashboard.html">
         <b>D. </b>Check Monitoring Dashboard
         <i class="fas fa-check read-icon"></i>
@@ -589,7 +589,7 @@
  
   
     
-      <li data-nav-id="/50_start_services/60_change_log_level.html" title="Change log level" class="dd-item ">
+      <li data-nav-id="/50_start_services/60_change_log_level.html" title="Change log level" class="dd-item active">
         <a href="/klaytn-cypress-setup-workshop/50_start_services/60_change_log_level.html">
         <b>F. </b>Change log level
         <i class="fas fa-check read-icon"></i>
@@ -701,7 +701,7 @@
                   <span class="links">
                  
                  
-                   Check Monitoring Dashboard
+                   Change log level
                  
                   </span>
                 </div>
@@ -732,7 +732,7 @@
           
             <h1>
               
-              Check Monitoring Dashboard
+              Change log level
             </h1>
           
 
@@ -741,21 +741,10 @@
 
 <br />
 
-<h4 id="4-take-a-look-at-grafana-dashboard-to-confirm-if-your-nodes-are-correctly-joined-to-cypress-network">4. Take a look at Grafana dashboard to confirm if your nodes are correctly joined to Cypress network.</h4>
-<p><strong>Link : <a href="http://cypress.klaytn.net:3000/d/tc1SOM4Zz/dashboardcco?orgId=1&amp;from=now-5m&amp;to=now">Cypress Grafana</a></strong>
+<h4 id="6-change-log-level">6. Change log level</h4>
+<p><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>$ sudo kcn attach --exec debug.verbosity(1) DATA_DIR/klay.ipc
+</span></span><span style="display:flex;"><span>$ sudo kcn attach --exec debug.vmodule(&#34;blockchain=3&#34;) DATA_DIR/klay.ipc</span></span></code></pre></div>
 <br />
-</p>
-<p><em>** You can refer this document to check your services further.</em><br>
-<em><a href="https://docs.klaytn.foundation/docs/nodes/core-cell/install/install-proxy-nodes/#kpn-console-">https://docs.klaytn.foundation/docs/nodes/core-cell/install/install-proxy-nodes/#kpn-console-</a></em>
-<br />
-</p>
-<ol>
-<li>If your CN/PN Inter Connections looks 2 and blockNumber increases correctly in this dashboard, everything is configured normally.</li>
-<li>If you complete all the previous steps, please send a message to Klaytn DevOps by Slack.
-<br />
-</li>
-</ol>
-<p><br />
 
 If you finish this step, please click the next button <code>&gt;</code> on the right side of this page.</p>
 
@@ -1099,26 +1088,6 @@ If you finish this step, please click the next button <code>&gt;</code> on the r
             
                 
                     
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                        
-                        
-                    
                 
                 
 
@@ -1146,6 +1115,23 @@ If you finish this step, please click the next button <code>&gt;</code> on the r
             
         
                     
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
             
         
                     
@@ -1153,6 +1139,9 @@ If you finish this step, please click the next button <code>&gt;</code> on the r
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -1174,10 +1163,10 @@ If you finish this step, please click the next button <code>&gt;</code> on the r
 	 
 	 
 		
-			<a class="nav nav-prev" href="/klaytn-cypress-setup-workshop/50_start_services/30_check_the_services.html" title="Check the services"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="/klaytn-cypress-setup-workshop/50_start_services/50_remove_chaindata.html" title="Remove Chaindata"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/klaytn-cypress-setup-workshop/50_start_services/50_remove_chaindata.html" title="Remove Chaindata" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/klaytn-cypress-setup-workshop/60_conclusion.html" title="Conclusion" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>

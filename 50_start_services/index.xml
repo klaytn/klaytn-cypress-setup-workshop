@@ -4,9 +4,9 @@
     <title>Start the services on Klaytn CCO Onboarding - Cypress</title>
     <link>/klaytn-cypress-setup-workshop/50_start_services.html</link>
     <description>Recent content in Start the services on Klaytn CCO Onboarding - Cypress</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 14 Jul 2022 19:26:47 +0900</lastBuildDate>
+    <lastBuildDate>Tue, 13 Aug 2024 10:43:05 +0900</lastBuildDate>
     <atom:link href="/klaytn-cypress-setup-workshop/50_start_services/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Start the klaytn services</title>
@@ -41,7 +41,14 @@
       <link>/klaytn-cypress-setup-workshop/50_start_services/50_remove_chaindata.html</link>
       <pubDate>Thu, 14 Jul 2022 19:26:47 +0900</pubDate>
       <guid>/klaytn-cypress-setup-workshop/50_start_services/50_remove_chaindata.html</guid>
-      <description>1. Now, the donwloaded chaindata for Cypress can be removed, if you can confirm everything is done without any problem. 1) For both CN and PN, $ rm klaytn-cypress-chaindata-20220719010712.tar.gz If you finish this step, please click the next button &amp;gt; on the right side of this page.</description>
+      <description>5. Now, the donwloaded chaindata for Cypress can be removed, if you can confirm everything is done without any problem. 1) For both CN and PN, $ rm klaytn-cypress-chaindata-20220719010712.tar.gz If you finish this step, please click the next button &amp;gt; on the right side of this page.</description>
+    </item>
+    <item>
+      <title>Change log level</title>
+      <link>/klaytn-cypress-setup-workshop/50_start_services/60_change_log_level.html</link>
+      <pubDate>Tue, 13 Aug 2024 10:43:05 +0900</pubDate>
+      <guid>/klaytn-cypress-setup-workshop/50_start_services/60_change_log_level.html</guid>
+      <description>6. Change log level $ sudo kcn attach --exec debug.verbosity(1) DATA_DIR/klay.ipc $ sudo kcn attach --exec debug.vmodule(&amp;#34;blockchain=3&amp;#34;) DATA_DIR/klay.ipc If you finish this step, please click the next button &amp;gt; on the right side of this page.</description>
     </item>
   </channel>
 </rss>

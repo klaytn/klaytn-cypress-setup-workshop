@@ -4,7 +4,7 @@
     <title>Configure Cypress Network on Klaytn CCO Onboarding - Cypress</title>
     <link>/klaytn-cypress-setup-workshop/40_configure_network.html</link>
     <description>Recent content in Configure Cypress Network on Klaytn CCO Onboarding - Cypress</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 20 Jul 2022 15:33:50 +0900</lastBuildDate>
     <atom:link href="/klaytn-cypress-setup-workshop/40_configure_network/index.xml" rel="self" type="application/rss+xml" />
@@ -27,7 +27,7 @@
       <link>/klaytn-cypress-setup-workshop/40_configure_network/30_telegraf_configuration.html</link>
       <pubDate>Thu, 14 Jul 2022 16:44:50 +0900</pubDate>
       <guid>/klaytn-cypress-setup-workshop/40_configure_network/30_telegraf_configuration.html</guid>
-      <description>1. To monitor your nodes in Cypress Dashboard, please change the influxdb configuration as below: 1) For both CN and PN, $ grep -A2 &amp;#34;influxdb&amp;#34; /etc/telegraf/telegraf.d/klaytn.conf [[outputs.influxdb]] urls = [ &amp;#34;http://13.209.53.161:45560&amp;#34; ] database = &amp;#34;klaytn_cypress&amp;#34; 2) Only for CN, Change the interval time of Telegraf agent from 10s to 1s.&#xA;$ cat /etc/telegraf/telegraf.conf | grep -v &amp;#39;^\s*$\|^\s*\#&amp;#39; | grep interval interval = &amp;#34;1s&amp;#34; round_interval = true flush_interval = &amp;#34;1s&amp;#34;</description>
+      <description>1. To monitor your nodes in Cypress Dashboard, please change the influxdb configuration as below: 1) For both CN and PN, $ grep -A2 &amp;#34;influxdb&amp;#34; /etc/telegraf/telegraf.d/klaytn.conf [[outputs.influxdb]] urls = [ &amp;#34;http://13.209.53.161:45560&amp;#34; ] database = &amp;#34;klaytn_cypress&amp;#34; 2) Only for CN, Change the interval time of Telegraf agent from 10s to 1s.&#xA;$ cat /etc/telegraf/telegraf.conf | grep -v &amp;#39;^\s*$\|^\s*\#&amp;#39; | grep interval interval = &amp;#34;1s&amp;#34; round_interval = true flush_interval = &amp;#34;1s&amp;#34; If you finish this step, please click the next button &amp;gt; on the right side of this page.</description>
     </item>
     <item>
       <title>Datadog Configuration</title>
