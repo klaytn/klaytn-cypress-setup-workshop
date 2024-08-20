@@ -16,14 +16,14 @@ _** You can refer to the chaindata size via **[Cypress snapshot archive](https:/
 _** Please note that this step will take a lot of time to download since snapshot is more than 1.4 TB, so we recommned to use temporary disk for downloading. If you want to reduce the time, please refer the next step._   
 _** The latest chaindata name can be different with this example due to the date information._
 {{< highlight html >}}
-$ URL=`curl -s https://packages.klaytn.net/cypress/pruning-chaindata/  |grep latest |awk -F'"' '{print $2}'`
+$ URL=`curl -s https://packages.kaia.io/cypress/pruning-chaindata/  |grep latest |awk -F'"' '{print $2}'`
 $ echo $URL
 https://s3.ap-northeast-2.amazonaws.com/klaytn-chaindata/cypress/pruning/klaytn-cypress-pruning-chaindata-20240131010111.tar.gz
 $ wget $URL
 {{< /highlight >}}
 ##### 2) For PN
 {{< highlight html >}}
-$ URL=`curl -s https://packages.klaytn.net/cypress/pruning-chaindata/ |grep latest |awk -F'"' '{print $2}'`
+$ URL=`curl -s https://packages.kaia.io/cypress/pruning-chaindata/ |grep latest |awk -F'"' '{print $2}'`
 $ echo $URL
 https://s3.ap-northeast-2.amazonaws.com/klaytn-chaindata/cypress/pruning/klaytn-cypress-pruning-chaindata-20240131010111.tar.gz
 $ wget $URL
@@ -36,7 +36,7 @@ _**[Axel](https://github.com/axel-download-accelerator/axel) tries to accelerate
 (Amazon Linux 2) $ sudo amazon-linux-extras install epel
 (CentOS) $ sudo yum install epel-release -y
 $ sudo yum install axel -y
-$ URL=`curl -s https://packages.klaytn.net/cypress/pruning-chaindata/ |grep latest |awk -F'"' '{print $2}'`
+$ URL=`curl -s https://packages.kaia.io/cypress/pruning-chaindata/ |grep latest |awk -F'"' '{print $2}'`
 $ echo $URL
 https://s3.ap-northeast-2.amazonaws.com/klaytn-chaindata/cypress/pruning/klaytn-cypress-pruning-chaindata-20240131010111.tar.gz
 $ axel -n8 $URL
@@ -46,7 +46,7 @@ $ axel -n8 $URL
 (Amazon Linux 2) $ sudo amazon-linux-extras install epel
 (CentOS) $ sudo yum install epel-release -y
 $ sudo yum install axel -y
-$ URL=`curl -s https://packages.klaytn.net/cypress/pruning-chaindata/ |grep latest |awk -F'"' '{print $2}'`
+$ URL=`curl -s https://packages.kaia.io/cypress/pruning-chaindata/ |grep latest |awk -F'"' '{print $2}'`
 $ echo $URL
 https://s3.ap-northeast-2.amazonaws.com/klaytn-chaindata/cypress/pruning/klaytn-cypress-pruning-chaindata-20240131010111.tar.gz
 $ axel -n8 $URL

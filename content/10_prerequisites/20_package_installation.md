@@ -19,17 +19,15 @@ $ sudo su
 $ cd /tmp
 $ cp /etc/k*nd/conf/k*nd.conf /tmp
 $ systemctl stop k*nd
-$ aws s3 cp s3://klaytn-packages-repo/packages/rhel/7/kaia/k*nd-v1.0.1-0.el7.x86_64.rpm ./
+$ sudo rm -rf /var/cache/yum
+$ sudo rm /etc/yum.repos.d/klaytn.repo
+$ sudo curl -o /etc/yum.repos.d/kaia.repo https://packages.kaia.io/config/rhel/7/kaia.repo
+$ sudo yum list kcnd
 $ yum remove k*nd -y
-$ rpm -Uvh --force k*nd-v1.0.1-0.el7.x86_64.rpm
+$ sudo yum install kcnd-v1.0.2-0.el7.x86_64.rpm
 $ cp k*nd.conf /etc/k*nd/conf/
 $ systemctl start k*nd
 $ k*n version
-{{< /highlight >}}
-##### 3) Change yum repo url
-{{< highlight html >}}
-$ sudo rm /etc/yum.repos.d/klaytn.repo
-$ sudo curl -o /etc/yum.repos.d/kaia.repo https://packages.klaytn.net/config/rhel/7/kaia.repo
 {{< /highlight >}}
 
 {{< line_break >}}
