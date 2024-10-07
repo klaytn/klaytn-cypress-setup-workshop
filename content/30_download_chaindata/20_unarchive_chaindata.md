@@ -11,12 +11,12 @@ draft: false
 
 ##### 1) For CN,
 {{< highlight html >}}
-$ tar -C <your_klaytn_home_path>/kcnd/data -xvf klaytn-cypress-pruning-chaindata-20240131010151.tar.gz --exclude klay/chaindata/receipts
+$ tar -C <your_klaytn_home_path>/kcnd/data -xvf kaia-mainnet--pruning-chaindata-20240131010151.tar.gz --exclude klay/chaindata/receipts
 {{< /highlight >}}
 
 ##### 2) For PN,
 {{< highlight html >}}
-$ tar -C <your_klaytn_home_path>/kpnd/data -xvf klaytn-cypress-pruning-chaindata-20240131010151.tar.gz --exclude klay/chaindata/receipts
+$ tar -C <your_klaytn_home_path>/kpnd/data -xvf kaia-mainnet--pruning-chaindata-20240131010151.tar.gz --exclude klay/chaindata/receipts
 {{< /highlight >}}
 
 {{< line_break >}}
