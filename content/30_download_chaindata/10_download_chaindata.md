@@ -36,9 +36,9 @@ _**[Axel](https://github.com/axel-download-accelerator/axel) tries to accelerate
 (Amazon Linux 2) $ sudo amazon-linux-extras install epel
 (CentOS) $ sudo yum install epel-release -y
 $ sudo yum install axel -y
-$ URL=`curl -s https://packages.kaia.io/cypress/pruning-chaindata/ |grep latest |awk -F'"' '{print $2}'`
+$ URL=`curl -s https://packages.kaia.io/mainnet/pruning-chaindata/ |grep latest |awk -F'"' '{print $2}'`
 $ echo $URL
-https://s3.ap-northeast-2.amazonaws.com/klaytn-chaindata/cypress/pruning/klaytn-cypress-pruning-chaindata-20240131010111.tar.gz
+https://s3.ap-northeast-2.amazonaws.com/klaytn-chaindata/mainnet/pruning/kaia-mainnet-pruning-chaindata-20240131010111.tar.gz
 $ axel -n8 $URL
 {{< /highlight >}}
 ##### 2) For PN
@@ -48,7 +48,7 @@ $ axel -n8 $URL
 $ sudo yum install axel -y
 $ URL=`curl -s https://packages.kaia.io/cypress/pruning-chaindata/ |grep latest |awk -F'"' '{print $2}'`
 $ echo $URL
-https://s3.ap-northeast-2.amazonaws.com/klaytn-chaindata/cypress/pruning/klaytn-cypress-pruning-chaindata-20240131010111.tar.gz
+https://s3.ap-northeast-2.amazonaws.com/klaytn-chaindata/mainnet/pruning/kaia-mainnet-pruning-chaindata-20240131010111.tar.gz
 $ axel -n8 $URL
 {{< /highlight >}}
 
