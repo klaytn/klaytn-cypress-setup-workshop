@@ -1,11 +1,11 @@
 +++
 title = "Conclusion"
 date = 2022-07-11T18:51:05+09:00
-weight = 60
-chapter = true
+weight = 6
+type = "chapter"
 pre = "<b>6. </b>"
 +++
 
 
-![Klaytn Cypress_Logo](/images/Logo-baobab.png)
-### Congratulations! Now, you are playing in the Cypress network.
+![Kaia Mainnet_Logo](/images/Logo-1.png)
+### Congratulations! Now, you are playing in the Mainnet network.

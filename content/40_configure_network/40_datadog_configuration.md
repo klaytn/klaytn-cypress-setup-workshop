@@ -7,9 +7,9 @@ draft: false
 ---
 
 {{< line_break >}}
-#### 2. For additional monitoring, we are planning to use Datadog as well. Please follow this step for Datadog installation.
+##### 2. For additional monitoring, we are planning to use Datadog as well. Please follow this step for Datadog installation.
 
-##### 1) For CN, 
+###### 1) For CN, 
 {{< highlight html >}}
 $ cat <<EOF>> dd_vars
 export DD_API_KEY=DATADOG API KEY
@@ -17,7 +17,7 @@ export NETWORK=cypress
 export NODE_NAME=<cco_name>-cn-01
 export NODE_TYPE=cn 
 export INSTANCE=cn 
-export LOG_DIR=<your_klaytn_home_path>/kcnd/log
+export LOG_DIR=<your_kaia_home_path>/kcnd/log
 EOF
 
 $ source dd_vars
@@ -28,15 +28,15 @@ _** DD_API_KEY will be shared with you by Slack DM._
 _** Please use lowercase for NODE_NAME._   
 _** For example, ```LOG_DIR = /data/kcnd/log or /data/kcnd/logs, NODE_NAME=cco_name-cn-01```_   
 
-##### 2) For PN,
+###### 2) For PN,
 {{< highlight html >}}
 $ cat <<EOF>> dd_vars
 export DD_API_KEY=DATADOG API KEY
 export NETWORK=cypress
-export NODE_NAME=<cco_name>-pn-01 or <cco_name>-pn-02
+export NODE_NAME=<cco_name>-pn-01
 export NODE_TYPE=pn
-export INSTANCE=pn1 or pn2
-LOG_DIR=<your_klaytn_home_path>/kpnd/log
+export INSTANCE=pn1
+LOG_DIR=<your_kaia_home_path>/kpnd/log
 EOF
 
 $ source dd_vars
@@ -45,11 +45,11 @@ $ bash -c "$(curl -L https://raw.githubusercontent.com/klaytn/datadog-agent-inst
 {{< /highlight >}}
 _** DD_API_KEY will be shared with you by Slack DM._   
 _** Please use lowercase for NODE_NAME._   
-_** For example, ```LOG_DIR = /data/kpnd/log or /data/kpnd/logs, NODE_NAME=cco_name-pn-01 or cco_name-pn-02```_   
+_** For example, ```LOG_DIR = /data/kpnd/log or /data/kpnd/logs, NODE_NAME=cco_name-pn-01```_   
 
-#### 3. To allow your nodes to communicate Datadog, please add these IP addresses to the firewall of each node.
-##### Port number 443 ```3.233.144.0/20```
-##### Port number 10516 ```3.233.152.63/32```
+##### 3. To allow your nodes to communicate Datadog, please add these IP addresses to the firewall of each node.
+###### Port number 443 ```3.233.144.0/20```
+###### Port number 10516 ```3.233.152.63/32```
 
 {{< line_break >}}
 If you finish this step, please click the next button ```>``` on the right side of this page.

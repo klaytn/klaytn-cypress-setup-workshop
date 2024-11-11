@@ -1,17 +1,15 @@
 +++
-title = "Configure Cypress Network"
+title = "Configure Mainnet Network"
 date = 2022-07-11T10:25:55+09:00
-weight = 40
-chapter = true
+weight = 4
+type = "chapter"
 pre = "<b>4. </b>"
 +++
 
-### Chapter 4
 
-# Configure Cypress Network
 
-#### Now, we are going to re-configure networks to join Cypress.
-#### 
+##### Now, we are going to re-configure networks to join Mainnet.
+##### 
 
 {{< line_break >}}
 {{< line_break >}}

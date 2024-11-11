@@ -8,12 +8,12 @@ draft: false
 
 {{< line_break >}}
 
-#### 2. Installation of Klaytn packages for CN and PN
-_** We've already installed packages during the Pre-cypress stage. If you need to install newly, please refer these documents._
-##### 1) Document pages
+##### 2. Installation of Kaia packages for CN and PN
+_** We've already installed packages during the Private Network stage. If you need to install newly, please refer these documents._
+###### 1) Document pages
 1. CN - <https://docs.kaia.io/nodes/core-cell/install/install-consensus-nodes/>
 2. PN - <https://docs.kaia.io/nodes/core-cell/install/install-proxy-nodes/>
-##### 2) Reinstall k*nd caused by version conflict
+###### 2) Reinstall k*nd caused by version conflict
 {{< highlight html >}}
 $ sudo su
 $ cd /tmp

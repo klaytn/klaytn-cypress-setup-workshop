@@ -7,9 +7,9 @@ draft: false
 ---
 {{< line_break >}}
 
-#### 1. *(Only for CN)* Firewall configuration
+##### 1. *(Only for CN)* Firewall configuration
 
-##### 1) If Baobab validation is completed, remove below Klaytn CN's IP addresses of Baobab from your firewall configuration.
+###### 1) If Kairos validation is completed, remove below Kaia CN's IP addresses of Kairos from your firewall configuration.
 ```54.180.180.202```   
 ```54.180.18.176```   
 ```52.79.134.72```   
@@ -17,11 +17,11 @@ draft: false
 {{< line_break >}}
 {{< line_break >}}
 
-##### 2) For communication and multichannel across CCO CNs in the Cypress network, TCP ```32323-32324``` and UDP ``` 32323 ``` from existing CCO's CNs should be allowed in your CN firewall configuration.
+###### 2) For communication and multichannel across CCO CNs in the Mainnet network, TCP ```32323-32324``` and UDP ``` 32323 ``` from existing CCO's CNs should be allowed in your CN firewall configuration.
 _** The existing CCO's CNs IP addresses will be provided by Slack DM._
 
 {{< line_break >}}
-##### 3) For communication and multichannel across Bootnode in the Cypress network, UDP ``` 32323 ``` from existing CCO's CNs should be allowed in your CN firewall configuration.
+###### 3) For communication and multichannel across Bootnode in the Mainnet network, UDP ``` 32323 ``` from existing CCO's CNs should be allowed in your CN firewall configuration.
 _** The existing Bootnode IP addresses will be provided by Slack DM._
 
 {{< line_break >}}

@@ -7,17 +7,17 @@ draft: false
 ---
 
 {{< line_break >}}
-#### 1. To monitor your nodes in Cypress Dashboard, please change the influxdb configuration as below:
+##### 1. To monitor your nodes in Mainnet Dashboard, please change the influxdb configuration as below:
 
-##### 1) For both CN and PN,
+###### 1) For both CN and PN,
 {{< highlight html >}}
-$ grep -A2 "influxdb" /etc/telegraf/telegraf.d/klaytn.conf
+$ grep -A2 "influxdb" /etc/telegraf/telegraf.d/kaia.conf
 [[outputs.influxdb]]
 urls = [ "http://13.209.53.161:45560" ]
 database = "klaytn_cypress"
 {{< /highlight >}}
 
-##### 2) Only for CN,
+###### 2) Only for CN,
 1. Change the interval time of Telegraf agent from 10s to 1s.   
 {{< highlight html >}}
 $ cat /etc/telegraf/telegraf.conf | grep -v '^\s*$\|^\s*\#' | grep interval

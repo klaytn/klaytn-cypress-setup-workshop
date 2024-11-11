@@ -7,8 +7,8 @@ draft: false
 ---
 
 {{< line_break >}}
-#### 2. Stop the Telegraf service, if it is running.
-##### 1) For both CN and PN,
+##### 2. Stop the Telegraf service, if it is running.
+###### 1) For both CN and PN,
 {{< highlight html >}}
 $ sudo systemctl status telegraf
 $ sudo systemctl stop telegraf

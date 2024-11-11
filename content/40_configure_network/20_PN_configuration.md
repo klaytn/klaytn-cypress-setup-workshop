@@ -7,18 +7,18 @@ draft: false
 ---
 
 {{< line_break >}}
-#### 2. Modify the static-nodes.json in your PN1 and PN2.
+##### 2. Modify the static-nodes.json in your PN1 and PN2.
 
-##### Since the information in the static-nodes.json is different for each PN, we will inform each CCO individually by Slack DM.
+###### Since the information in the static-nodes.json is different for each PN, we will inform each CCO individually by Slack DM.
 _** Please refer the diagram below and the docs to understand PNN(Proxy Node Network)._ 
-https://docs.klaytn.foundation/docs/learn/#tiered-networks-
+https://docs.kaia.io/learn/#node-types
 
-> PNN(Proxy Node Network) consists of PNs within the Cypress network topology.   
+> PNN(Proxy Node Network) consists of PNs within the Mainnet network topology.   
 > Typically, PNs maintain just one connection with a PN in a neighboring Core Cell. The number of peer connections is subject to change depending on the network configuration.
 
 _** Please note that PN uses a static-nodes.json file to find out where to connect._   
 
-![Klaytn_Network_Topology](/images/PNN_topology.png)
+![Kaia_Network_Topology](/images/PNN_topology.png)
 
 
 {{< line_break >}}

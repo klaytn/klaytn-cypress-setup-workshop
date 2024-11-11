@@ -1,16 +1,14 @@
 +++
 title = "Start the services"
 date = 2022-07-11T18:26:28+09:00
-weight = 50
-chapter = true
+weight = 5
+type = "chapter"
 pre = "<b>5. </b>"
 +++
 
-### Chapter 5
 
-# Start the services
 
-#### Now, we are ready to start Klaytn service for Cypress.
+##### Now, we are ready to start Kaia service for Mainnet.
 
 
 {{< line_break >}}
