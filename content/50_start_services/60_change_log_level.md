@@ -6,7 +6,7 @@ pre: "<b>F. </b>"
 draft: false
 ---
 {{< line_break >}}
-#### 6. Change log level
+##### 6. Change log level
 {{< highlight html >}}
 $ sudo kcn attach --exec debug.verbosity(1) DATA_DIR/klay.ipc
 $ sudo kcn attach --exec debug.vmodule("blockchain=3") DATA_DIR/klay.ipc

@@ -7,15 +7,15 @@ draft: false
 ---
 
 {{< line_break >}}
-#### 2. Start monitoring services.
-##### 1) For both CN and PN, start the Telegraf service.
+##### 2. Start monitoring services.
+###### 1) For both CN and PN, start the Telegraf service.
 {{< highlight html >}}
 $ sudo systemctl status telegraf
 $ sudo systemctl start telegraf
 $ sudo systemctl status telegraf
 {{< /highlight >}}
 
-##### 2) For both CN and PN, start the Datadog service if it is stopped.
+###### 2) For both CN and PN, start the Datadog service if it is stopped.
 {{< highlight html >}}
 $ sudo systemctl status datadog-agent
 $ sudo systemctl start datadog-agent

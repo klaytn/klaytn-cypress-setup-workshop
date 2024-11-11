@@ -1,16 +1,14 @@
 +++
 title = "Prerequisites"
 date = 2022-07-11T10:17:42+09:00
-weight = 10
-chapter = true
+weight = 1
+type = "chapter"
 pre = "<b>1. </b>"
 draft = false
 +++
 
-### Chapter 1
 
-# Prerequisites
-The prerequisites for joining Cypress network are covered in this chapter. 
+The prerequisites for joining Mainnet network are covered in this chapter. 
 
 {{< line_break >}}
 {{< line_break >}}

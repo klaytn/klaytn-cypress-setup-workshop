@@ -7,16 +7,16 @@ draft: false
 ---
 
 {{< line_break >}}
-#### 2. Extract the chaindata downloaded to the DATA_DIR.
+##### 2. Extract the chaindata downloaded to the DATA_DIR.
 
-##### 1) For CN,
+###### 1) For CN,
 {{< highlight html >}}
-$ tar -C <your_klaytn_home_path>/kcnd/data -xvf kaia-mainnet--pruning-chaindata-20240131010151.tar.gz --exclude klay/chaindata/receipts
+$ tar -C <your_kaia_home_path>/kcnd/data -xvf kaia-mainnet-pruning-chaindata-20241109011112.tar.gz --exclude klay/chaindata/receipts
 {{< /highlight >}}
 
-##### 2) For PN,
+###### 2) For PN,
 {{< highlight html >}}
-$ tar -C <your_klaytn_home_path>/kpnd/data -xvf kaia-mainnet--pruning-chaindata-20240131010151.tar.gz --exclude klay/chaindata/receipts
+$ tar -C <your_kaia_home_path>/kpnd/data -xvf kaia-mainnet-pruning-chaindata-20241109011112.tar.gz --exclude klay/chaindata/receipts
 {{< /highlight >}}
 
 {{< line_break >}}

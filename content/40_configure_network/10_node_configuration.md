@@ -7,10 +7,10 @@ draft: false
 ---
 
 {{< line_break >}}
-#### 1. Modify network, discovery and boot node information.
+##### 1. Modify network, discovery and boot node information.
 _** Note that CN and PN have some different information._
 
-##### 1) For CN, your configuration should be modified as shown below.
+###### 1) For CN, your configuration should be modified as shown below.
 {{< highlight html >}}
 $ egrep "^NETWORK|NO_DISCOVER|BOOTNODES|ADDITIONAL" /etc/kcnd/conf/kcnd.conf
 NETWORK="cypress"
@@ -20,7 +20,7 @@ BOOTNODES="kni://b286e4140aea469992146c299f8915e34d59a014c29a045de41e57801476111
 ADDITIONAL="--state.trie-cache-limit 5000 --state.live-pruning"
 {{< /highlight >}}
 
-##### 2) For PN
+###### 2) For PN
 {{< highlight html >}}
 $ egrep "^NETWORK|NO_DISCOVER|BOOTNODES|ADDITIONAL" /etc/kpnd/conf/kpnd.conf
 NETWORK="cypress"

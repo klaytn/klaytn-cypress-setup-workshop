@@ -7,11 +7,11 @@ draft: false
 ---
 
 {{< line_break >}}
-#### 5. Now, the donwloaded chaindata for Cypress can be removed, if you can confirm everything is done without any problem.
+##### 5. Now, the donwloaded chaindata for Mainnet can be removed, if you can confirm everything is done without any problem.
 
-##### 1) For both CN and PN,
+###### 1) For both CN and PN,
 {{< highlight html >}}
-$ rm klaytn-cypress-chaindata-20220719010712.tar.gz
+$ rm kaia-mainnet-pruning-chaindata-20241109011112.tar.gz
 {{< /highlight >}}
 
 {{< line_break >}}
